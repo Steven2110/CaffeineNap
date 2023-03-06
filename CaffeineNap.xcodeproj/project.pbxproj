@@ -61,6 +61,9 @@
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
 				B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */,
+				B0C64DDD29B5F7D900C3BC07 /* Models */,
+				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
+				B0C64DDB29B5F7CF00C3BC07 /* Views */,
 				B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */,
 				B0C64DCE29B5ED0800C3BC07 /* Preview Content */,
 			);
@@ -73,6 +76,27 @@
 				B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0C64DDB29B5F7CF00C3BC07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0C64DDC29B5F7D400C3BC07 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0C64DDD29B5F7D900C3BC07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
