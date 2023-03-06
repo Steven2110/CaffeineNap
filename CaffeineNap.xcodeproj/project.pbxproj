@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
-		B0C64DCB29B5ED0700C3BC07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
 		B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD729B5ED5200C3BC07 /* .gitignore */; };
 		B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD929B5ED5E00C3BC07 /* README.md */; };
+		B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */; };
+		B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DE129B5FED900C3BC07 /* ColorExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
-		B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaffeineNap.entitlements; sourceTree = "<group>"; };
 		B0C64DD729B5ED5200C3BC07 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B0C64DD929B5ED5E00C3BC07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNTabView.swift; sourceTree = "<group>"; };
+		B0C64DE129B5FED900C3BC07 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
-				B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */,
+				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
 				B0C64DDB29B5F7CF00C3BC07 /* Views */,
@@ -81,6 +83,7 @@
 		B0C64DDB29B5F7CF00C3BC07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +100,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B0C64DE029B5FECF00C3BC07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C64DCB29B5ED0700C3BC07 /* ContentView.swift in Sources */,
+				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
+				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

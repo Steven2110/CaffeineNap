@@ -11,7 +11,7 @@ import SwiftUI
 struct CaffeineNapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CNTabView()
         }
     }
 }
