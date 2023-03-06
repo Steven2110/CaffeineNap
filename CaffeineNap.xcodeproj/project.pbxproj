@@ -11,6 +11,8 @@
 		B0C64DCB29B5ED0700C3BC07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
+		B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD729B5ED5200C3BC07 /* .gitignore */; };
+		B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD929B5ED5E00C3BC07 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaffeineNap.entitlements; sourceTree = "<group>"; };
+		B0C64DD729B5ED5200C3BC07 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B0C64DD929B5ED5E00C3BC07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,8 @@
 		B0C64DBC29B5ED0700C3BC07 = {
 			isa = PBXGroup;
 			children = (
+				B0C64DD729B5ED5200C3BC07 /* .gitignore */,
+				B0C64DD929B5ED5E00C3BC07 /* README.md */,
 				B0C64DC729B5ED0700C3BC07 /* CaffeineNap */,
 				B0C64DC629B5ED0700C3BC07 /* Products */,
 			);
@@ -51,6 +58,7 @@
 		B0C64DC729B5ED0700C3BC07 /* CaffeineNap */ = {
 			isa = PBXGroup;
 			children = (
+				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
 				B0C64DCA29B5ED0700C3BC07 /* ContentView.swift */,
 				B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */,
@@ -126,6 +134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */,
+				B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */,
+				B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */,
 				B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaffeineNap/CaffeineNap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineNap/Preview Content\"";
@@ -280,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.StevenWijaya.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwik.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaffeineNap/CaffeineNap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineNap/Preview Content\"";
@@ -309,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.StevenWijaya.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwik.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
