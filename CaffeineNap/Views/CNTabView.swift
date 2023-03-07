@@ -10,7 +10,8 @@ import SwiftUI
 struct CNTabView: View {
     var body: some View {
         TabView {
-            Text("Home Page!")
+//            Text("Home Page!")
+            CNHomeView()
                 .tabItem { Label("Home", image: "home-icon") }
             Text("Caffeine Nap page!")
                 .tabItem{ Label("CaffeineNap", systemImage: "moon.zzz") }

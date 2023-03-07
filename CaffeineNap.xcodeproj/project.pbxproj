@@ -14,6 +14,12 @@
 		B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD929B5ED5E00C3BC07 /* README.md */; };
 		B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */; };
 		B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DE129B5FED900C3BC07 /* ColorExt.swift */; };
+		B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DE329B603EE00C3BC07 /* CNHomeView.swift */; };
+		B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DE629B6EF8C00C3BC07 /* MainInfo.swift */; };
+		B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DE829B6F1CB00C3BC07 /* CaffeineLevelInfo.swift */; };
+		B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */; };
+		B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */; };
+		B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		B0C64DD929B5ED5E00C3BC07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNTabView.swift; sourceTree = "<group>"; };
 		B0C64DE129B5FED900C3BC07 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		B0C64DE329B603EE00C3BC07 /* CNHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNHomeView.swift; sourceTree = "<group>"; };
+		B0C64DE629B6EF8C00C3BC07 /* MainInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfo.swift; sourceTree = "<group>"; };
+		B0C64DE829B6F1CB00C3BC07 /* CaffeineLevelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineLevelInfo.swift; sourceTree = "<group>"; };
+		B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInfo.swift; sourceTree = "<group>"; };
+		B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodOxygenInfo.swift; sourceTree = "<group>"; };
+		B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
+				B0C64DE529B6EF7000C3BC07 /* HomeView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +121,19 @@
 				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0C64DE529B6EF7000C3BC07 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DE329B603EE00C3BC07 /* CNHomeView.swift */,
+				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
+				B0C64DE629B6EF8C00C3BC07 /* MainInfo.swift */,
+				B0C64DE829B6F1CB00C3BC07 /* CaffeineLevelInfo.swift */,
+				B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */,
+				B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
+				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
+				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
+				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
+				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
