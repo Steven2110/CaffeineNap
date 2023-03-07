@@ -127,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DE329B603EE00C3BC07 /* CNHomeView.swift */,
-				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
 				B0C64DE629B6EF8C00C3BC07 /* MainInfo.swift */,
 				B0C64DE829B6F1CB00C3BC07 /* CaffeineLevelInfo.swift */,
-				B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */,
 				B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */,
+				B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */,
+				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
