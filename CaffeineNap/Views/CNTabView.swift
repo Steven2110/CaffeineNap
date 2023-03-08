@@ -16,7 +16,7 @@ struct CNTabView: View {
                 .tabItem{ Label("CaffeineNap", systemImage: "moon.zzz") }
             Text("Add Drinks Page/Sheet!")
                 .tabItem{ Label("Add Drinks", systemImage: "plus.circle").environment(\.symbolVariants, .none) }
-            Text("Beverages List Page!")
+            CNBeveragesListView()
                 .tabItem{ Label("Beverages", systemImage: "cup.and.saucer") }
             Text("Settings & Profile Page!")
                 .tabItem{ Label("Settings", systemImage: "gearshape.fill") }

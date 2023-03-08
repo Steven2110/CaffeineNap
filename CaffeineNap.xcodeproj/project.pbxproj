@@ -20,6 +20,8 @@
 		B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */; };
 		B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */; };
 		B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */; };
+		B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */; };
+		B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF329B8803000C3BC07 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInfo.swift; sourceTree = "<group>"; };
 		B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodOxygenInfo.swift; sourceTree = "<group>"; };
 		B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
+		B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeveragesListView.swift; sourceTree = "<group>"; };
+		B0C64DF329B8803000C3BC07 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
+				B0C64DF329B8803000C3BC07 /* MockData.swift */,
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
@@ -97,6 +102,7 @@
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
 				B0C64DE529B6EF7000C3BC07 /* HomeView */,
+				B0C64DF029B71D2800C3BC07 /* BeveragesView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B0C64DF029B71D2800C3BC07 /* BeveragesView */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */,
+			);
+			path = BeveragesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,12 +224,14 @@
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
+				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
+				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
