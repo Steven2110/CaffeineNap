@@ -22,6 +22,8 @@
 		B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */; };
 		B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */; };
 		B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF329B8803000C3BC07 /* MockData.swift */; };
+		B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF529B88B3D00C3BC07 /* Beverage.swift */; };
+		B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
 		B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeveragesListView.swift; sourceTree = "<group>"; };
 		B0C64DF329B8803000C3BC07 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		B0C64DF529B88B3D00C3BC07 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +82,6 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
-				B0C64DF329B8803000C3BC07 /* MockData.swift */,
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
@@ -117,6 +120,9 @@
 		B0C64DDD29B5F7D900C3BC07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0C64DF529B88B3D00C3BC07 /* Beverage.swift */,
+				B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */,
+				B0C64DF329B8803000C3BC07 /* MockData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,11 +229,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
+				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,

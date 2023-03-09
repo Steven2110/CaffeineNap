@@ -14,11 +14,11 @@ struct CNBeveragesListView: View {
         case coffee = "Coffee"
         case tea = "Tea"
         case sodaED = "Soda & Energy drink"
-        case medicine = "Medicine"
+//        case medicine = "Medicine"
     }
     
     @State private var selectedCategory: Category = .all
-    @State private var selectedList: [String] = [String]()
+    @State private var selectedList: [Beverage] = [Beverage]()
     
     var body: some View {
         NavigationView {
@@ -61,12 +61,15 @@ struct CNBeveragesListView: View {
                         Text("Network call error!")
                     }
                 } else {
-                    List(selectedList, id: \.self) { item in
+                    List(selectedList, id: \.id) { item in
                         NavigationLink {
-                            Text("Pages for editing: \(item)")
+                            Text("Pages for editing: \(item.name)")
                         } label: {
-                            coffeeCupIcon
-                            Text(item)
+                            Image(item.icon)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25, height: 25)
+                            Text(item.name)
                         }
                         .listRowBackground(Color.brandSecondary)
                     }
@@ -95,10 +98,10 @@ struct CNBeveragesListView_Previews: PreviewProvider {
 }
 
 extension CNBeveragesListView {
-    private func getSelectedList(selectedCategory: Category) -> [String] {
+    private func getSelectedList(selectedCategory: Category) -> [Beverage] {
         switch(selectedCategory) {
         case .all:
-            return MockData.customDrinks + MockData.coffee + MockData.tea + MockData.sodaED + MockData.medicine
+            return MockData.customDrinks + MockData.coffee + MockData.tea + MockData.sodaED // + MockData.medicine
         case .custom:
             return MockData.customDrinks
         case .coffee:
@@ -107,15 +110,8 @@ extension CNBeveragesListView {
             return MockData.tea
         case .sodaED:
             return MockData.sodaED
-        case .medicine:
-            return MockData.medicine
+//        case .medicine:
+//            return MockData.medicine
         }
-    }
-    
-    private var coffeeCupIcon: some View {
-        Image("coffee-cup")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 25, height: 36)
     }
 }
