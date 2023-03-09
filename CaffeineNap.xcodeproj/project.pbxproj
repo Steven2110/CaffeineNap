@@ -24,6 +24,11 @@
 		B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF329B8803000C3BC07 /* MockData.swift */; };
 		B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF529B88B3D00C3BC07 /* Beverage.swift */; };
 		B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */; };
+		B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */; };
+		B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DFB29B9C27300C3BC07 /* Constants.swift */; };
+		B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */; };
+		B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */; };
+		B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		B0C64DF329B8803000C3BC07 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		B0C64DF529B88B3D00C3BC07 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
 		B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B0C64DFB29B9C27300C3BC07 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,8 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
+				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
+				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
@@ -104,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
+				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
 				B0C64DE529B6EF7000C3BC07 /* HomeView */,
 				B0C64DF029B71D2800C3BC07 /* BeveragesView */,
 			);
@@ -131,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
+				B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +168,15 @@
 				B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */,
 			);
 			path = BeveragesView;
+			sourceTree = "<group>";
+		};
+		B0C64DFD29B9C67E00C3BC07 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */,
+				B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +253,11 @@
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
+				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
+				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
@@ -240,7 +265,10 @@
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
+				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
+				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
+				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

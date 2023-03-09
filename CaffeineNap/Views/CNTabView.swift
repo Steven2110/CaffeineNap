@@ -18,7 +18,7 @@ struct CNTabView: View {
                 .tabItem{ Label("Add Drinks", systemImage: "plus.circle").environment(\.symbolVariants, .none) }
             CNBeveragesListView()
                 .tabItem{ Label("Beverages", systemImage: "cup.and.saucer") }
-            Text("Settings & Profile Page!")
+            ProfileView()
                 .tabItem{ Label("Settings", systemImage: "gearshape.fill") }
         }.accentColor(.brandPrimary)
     }

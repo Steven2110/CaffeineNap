@@ -14,4 +14,5 @@ extension Color {
     static let brandDarkBrown = Color("brandDarkBrown")
     static let lungBlue = Color(red: 0.392, green: 0.82, blue: 1)
     static let baseGray = Color(red: 0.783, green: 0.78, blue: 1)
+    static let badgeGray = Color(red: 0.851, green: 0.851, blue: 0.851)
 }
