@@ -76,7 +76,7 @@ struct ProfileView: View {
                         Text("Widget Style")
                     }
                     SettingRow(imageName: "wand.and.stars.inverse", color: Color.purple, text: "App Icon") {
-                        Text("App Icon")
+                        AppIconView()
                     }
                 }
                 Section("Data") {

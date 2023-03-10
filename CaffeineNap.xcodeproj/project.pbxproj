@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */; };
+		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicParameterView.swift; sourceTree = "<group>"; };
+		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */,
+				B04DB4E829BB219F0076058B /* AppIconView.swift */,
 			);
 			path = Personalization;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
+				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
