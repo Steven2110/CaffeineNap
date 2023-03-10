@@ -15,4 +15,8 @@ extension View {
     func usernameStyle() -> some View {
         self.modifier(UsernameText())
     }
+    
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }

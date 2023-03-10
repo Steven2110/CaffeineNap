@@ -64,7 +64,7 @@ struct ProfileView: View {
                 }
                 Section("Personalization") {
                     SettingRow(imageName: "dial.medium.fill", color: Color.red, text: "Metabolic Parameters") {
-                        Text("Metabolic Parameters")
+                        MetabolicParameterView()
                     }
                     SettingRow(imageName: "app.badge", color: Color.blue, text: "Notifications") {
                         Text("Notifications")
@@ -125,6 +125,8 @@ struct ProfileView: View {
                     Text("v 1.0.0")
                 }
             }
+            .navigationTitle("Profile & Settings")
+            .navigationBarHidden(true)
         }
     }
 }

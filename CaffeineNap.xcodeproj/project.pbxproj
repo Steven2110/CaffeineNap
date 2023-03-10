@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicParameterView.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B04DB4E429BABC770076058B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB4E529BABC7E0076058B /* Personalization */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B04DB4E529BABC7E0076058B /* Personalization */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */,
+			);
+			path = Personalization;
+			sourceTree = "<group>";
+		};
 		B0C64DBC29B5ED0700C3BC07 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +193,7 @@
 			children = (
 				B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */,
 				B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */,
+				B04DB4E429BABC770076058B /* Settings */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -261,6 +280,7 @@
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
+				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
