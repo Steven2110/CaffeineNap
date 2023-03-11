@@ -1,20 +1,24 @@
 //
-//  CNBeveragesListView.swift
+//  AddLogView.swift
 //  CaffeineNap
 //
-//  Created by Steven Wijaya on 07.03.2023.
+//  Created by Steven Wijaya on 10.03.2023.
 //
 
 import SwiftUI
 
-struct CNBeveragesListView: View {    
+struct AddLogView: View {
+    
+    @Binding var showParentSheet: Bool
+    @Environment(\.dismiss) var dismiss
     
     @State private var selectedCategory: Category = .all
     @State private var selectedList: [Beverage] = [Beverage]()
+    @State private var selectedDetents: PresentationDetent = .large
     
     var body: some View {
         NavigationView {
-            VStack{
+            VStack {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(Category.allCases, id: \.rawValue) { category in
@@ -33,7 +37,7 @@ struct CNBeveragesListView: View {
                         }
                     }
                 }.padding([.horizontal, .top])
-                if selectedList.isEmpty && selectedCategory == .custom {
+                if selectedCategory == .custom && selectedList.isEmpty {
                     VStack {
                         Text("Uh oh your custom list is empty...")
                         Text("Let's add some items 😌")
@@ -48,48 +52,61 @@ struct CNBeveragesListView: View {
                                 .cornerRadius(10)
                         }
                     }.frame(maxHeight: .infinity)
-                } else if selectedList.isEmpty && selectedCategory != .custom {
-                    VStack {
-                        Text("Network call error!")
-                    }
                 } else {
                     List(selectedList, id: \.id) { item in
                         NavigationLink {
-                            Text("Pages for editing: \(item.name)")
+                            DrinkAddLogView(showParentSheet: $showParentSheet, item: item)
+                                .toolbar {
+                                    Button {
+                                        dismiss()
+                                    } label: {
+                                        XDismissButton()
+                                    }
+
+                                }
+                                .onAppear {
+                                    withAnimation {
+                                        selectedDetents = .medium
+                                    }
+                                }
                         } label: {
                             Image(item.icon)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 25, height: 25)
-                            Text(item.name)
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                Text("\(getRangeCaffeine(item.volumeAndCaffeineAmount)) mg")
+                                    .font(.system(size: 13))
+                                    .foregroundColor(.secondary)
+                            }.padding(.leading)
                         }
                         .listRowBackground(Color.brandSecondary)
                     }
                 }
             }
-            .toolbar{
-                NavigationLink {
-                    Text("Page for adding new item")
+            .navigationTitle("Add Log")
+            .toolbar {
+                Button {
+                    dismiss()
                 } label: {
-                    Image(systemName: "plus.circle")
+                    XDismissButton()
                 }
             }
-            .navigationTitle("Beverages")
-            .navigationBarTitleDisplayMode(.inline)
-        }
-        .onAppear {
+        }.onAppear {
             selectedList = getSelectedList(selectedCategory: selectedCategory)
         }
+        .presentationDetents([.large, .fraction(0.8)])
     }
 }
 
-struct CNBeveragesListView_Previews: PreviewProvider {
+struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        CNBeveragesListView()
+        AddLogView(showParentSheet: .constant(true))
     }
 }
 
-extension CNBeveragesListView {
+extension AddLogView {
     private func getSelectedList(selectedCategory: Category) -> [Beverage] {
         switch(selectedCategory) {
         case .all:
@@ -105,5 +122,22 @@ extension CNBeveragesListView {
 //        case .medicine:
 //            return MockData.medicine
         }
+    }
+    
+    private func getRangeCaffeine(_ caffeineData: [VolumeCaffeineAmount]) -> String {
+        var range: String = ""
+        
+        let minCaffeine = caffeineData.min{ $0.amount < $1.amount }
+        let minCaffeineStr = String(format: "%.0f", minCaffeine!.amount)
+        let maxCaffeine = caffeineData.max{ $0.amount < $1.amount }
+        let maxCaffeineStr = String(format: "%.0f", maxCaffeine!.amount)
+        
+        if minCaffeine?.amount == maxCaffeine?.amount {
+            range = "\(minCaffeineStr)"
+        } else {
+            range = "\(minCaffeineStr) - \(maxCaffeineStr)"
+        }
+        
+        return range
     }
 }

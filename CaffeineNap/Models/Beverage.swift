@@ -7,19 +7,19 @@
 
 import Foundation
 
+enum VolumeType {
+    case single, double, triple, small, medium, large
+}
+
 struct Beverage: Identifiable {
     let id: UUID = UUID()
     var icon: String
     var name: String
     var base: Base
     var type: [DrinkType]
-    var volume: [VolumeType: Double]
-    var caffeineAmount: [VolumeType: Double]
+    var volumeAndCaffeineAmount: [VolumeCaffeineAmount]
+//    var caffeineAmount: [CaffeineAmount]
     var caffeinePer100: Double?
-    
-    enum VolumeType {
-        case single, double, triple, small, medium, large
-    }
     
     enum DrinkType {
         case iced, hot
@@ -30,3 +30,15 @@ struct Beverage: Identifiable {
     }
 }
 
+struct VolumeCaffeineAmount: Identifiable {
+    let id: UUID = UUID()
+    var type: VolumeType
+    var volume: Double
+    var amount: Double
+}
+
+//struct CaffeineAmount: Identifiable {
+//    let id: UUID = UUID()
+//    var type: VolumeType
+//    var amount: Double
+//}

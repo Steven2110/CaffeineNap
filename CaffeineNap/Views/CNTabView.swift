@@ -8,19 +8,43 @@
 import SwiftUI
 
 struct CNTabView: View {
+    
+    @State private var selectedItem = 1
+    @State private var previousSelectedItem = 1
+    
+    @State private var isPresentingAddSheet = false
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedItem) {
             CNHomeView()
                 .tabItem { Label("Home", image: "home-icon") }
+                .tag(1)
             Text("Caffeine Nap page!")
                 .tabItem{ Label("CaffeineNap", systemImage: "moon.zzz") }
+                .tag(2)
             Text("Add Drinks Page/Sheet!")
                 .tabItem{ Label("Add Drinks", systemImage: "plus.circle").environment(\.symbolVariants, .none) }
+                .tag(3)
             CNBeveragesListView()
                 .tabItem{ Label("Beverages", systemImage: "cup.and.saucer") }
+                .tag(4)
             ProfileView()
                 .tabItem{ Label("Settings", systemImage: "gearshape.fill") }
-        }.accentColor(.brandPrimary)
+                .tag(5)
+        }
+        .accentColor(.brandPrimary)
+        .onChange(of: selectedItem) { newValue in
+            if newValue == 3 {
+                isPresentingAddSheet = true
+                selectedItem = previousSelectedItem
+            } else {
+                previousSelectedItem = newValue
+            }
+        }
+        .sheet(isPresented: $isPresentingAddSheet) {
+            AddLogView(showParentSheet: $isPresentingAddSheet)
+        }
+
     }
 }
 

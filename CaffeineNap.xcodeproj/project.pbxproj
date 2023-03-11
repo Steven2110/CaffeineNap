@@ -11,6 +11,9 @@
 		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
 		B04DB4EB29BB2BD20076058B /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsView.swift */; };
 		B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EC29BB2D610076058B /* DayNotification.swift */; };
+		B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogView.swift */; };
+		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
+		B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB50D29BB59540076058B /* XDismissButton.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		B04DB4EA29BB2BD20076058B /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B04DB4EC29BB2D610076058B /* DayNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNotification.swift; sourceTree = "<group>"; };
+		B04DB4EE29BB4BAF0076058B /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
+		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
+		B04DB50D29BB59540076058B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		B04DB4E429BABC770076058B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */,
 				B04DB4E529BABC7E0076058B /* Personalization */,
 			);
 			path = Settings;
@@ -93,6 +100,23 @@
 				B04DB4EA29BB2BD20076058B /* NotificationsView.swift */,
 			);
 			path = Personalization;
+			sourceTree = "<group>";
+		};
+		B04DB50C29BB59470076058B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB50D29BB59540076058B /* XDismissButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B04DB51229BC8FFF0076058B /* AddDrinkLog */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB4EE29BB4BAF0076058B /* AddLogView.swift */,
+				B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */,
+			);
+			path = AddDrinkLog;
 			sourceTree = "<group>";
 		};
 		B0C64DBC29B5ED0700C3BC07 = {
@@ -142,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
+				B04DB51229BC8FFF0076058B /* AddDrinkLog */,
+				B04DB50C29BB59470076058B /* CustomViews */,
 				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
 				B0C64DE529B6EF7000C3BC07 /* HomeView */,
 				B0C64DF029B71D2800C3BC07 /* BeveragesView */,
@@ -201,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */,
-				B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */,
 				B04DB4E429BABC770076058B /* Settings */,
 			);
 			path = ProfileView;
@@ -223,6 +248,8 @@
 			dependencies = (
 			);
 			name = CaffeineNap;
+			packageProductDependencies = (
+			);
 			productName = CaffeineNap;
 			productReference = B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +278,8 @@
 				Base,
 			);
 			mainGroup = B0C64DBC29B5ED0700C3BC07;
+			packageReferences = (
+			);
 			productRefGroup = B0C64DC629B5ED0700C3BC07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +321,9 @@
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
 				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
+				B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */,
+				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
+				B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,

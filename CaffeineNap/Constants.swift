@@ -22,3 +22,12 @@ enum NotificationsDay {
         DayNotification(day: "Sunday", short: "Sun", letter: "S")
     ]
 }
+
+enum Category: String, CaseIterable {
+    case all = "All"
+    case custom = "Custom Drink"
+    case coffee = "Coffee"
+    case tea = "Tea"
+    case sodaED = "Soda & Energy drink"
+//        case medicine = "Medicine"
+}
