@@ -1,5 +1,5 @@
 //
-//  NotificationsView.swift
+//  NotificationsSettingView.swift
 //  CaffeineNap
 //
 //  Created by Steven Wijaya on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NotificationsView: View {
+struct NotificationsSettingView: View {
     
     @State private var allowNotifications: Bool = false
     @State private var logReminder: Bool = false
@@ -84,11 +84,11 @@ struct NotificationsView: View {
 
 struct NotificationsView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationsView()
+        NotificationsSettingView()
     }
 }
 
-extension NotificationsView {
+extension NotificationsSettingView {
     private var dayCircle: some View {
         Circle()
             .frame(width: 30, height: 30)

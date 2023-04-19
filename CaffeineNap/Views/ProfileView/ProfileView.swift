@@ -67,7 +67,7 @@ struct ProfileView: View {
                         MetabolicParameterView()
                     }
                     SettingRow(imageName: "app.badge", color: Color.blue, text: "Notifications") {
-                        Text("Notifications")
+                        NotificationsSettingView()
                     }
                     SettingRow(imageName: "rectangle.stack.badge.person.crop.fill", color: Color.green, text: "Interface") {
                         Text("Interface")

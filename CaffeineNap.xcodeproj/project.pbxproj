@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */; };
 		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
-		B04DB4EB29BB2BD20076058B /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsView.swift */; };
+		B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */; };
 		B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EC29BB2D610076058B /* DayNotification.swift */; };
 		B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogView.swift */; };
 		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicParameterView.swift; sourceTree = "<group>"; };
 		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
-		B04DB4EA29BB2BD20076058B /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettingView.swift; sourceTree = "<group>"; };
 		B04DB4EC29BB2D610076058B /* DayNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNotification.swift; sourceTree = "<group>"; };
 		B04DB4EE29BB4BAF0076058B /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
 		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			children = (
 				B04DB4E829BB219F0076058B /* AppIconView.swift */,
 				B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */,
-				B04DB4EA29BB2BD20076058B /* NotificationsView.swift */,
+				B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */,
 			);
 			path = Personalization;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
-				B04DB4EB29BB2BD20076058B /* NotificationsView.swift in Sources */,
+				B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
