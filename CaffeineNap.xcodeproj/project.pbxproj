@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEC29F02B1000238E68 /* UISettingView.swift */; };
+		B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */; };
 		B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */; };
 		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
 		B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B04CABEC29F02B1000238E68 /* UISettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingView.swift; sourceTree = "<group>"; };
+		B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNThemeToggle.swift; sourceTree = "<group>"; };
 		B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicParameterView.swift; sourceTree = "<group>"; };
 		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettingView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				B04DB4E829BB219F0076058B /* AppIconView.swift */,
 				B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */,
 				B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */,
+				B04CABEC29F02B1000238E68 /* UISettingView.swift */,
 			);
 			path = Personalization;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B04DB50D29BB59540076058B /* XDismissButton.swift */,
+				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
+				B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */,
 				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */,
@@ -331,6 +338,7 @@
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
 				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
+				B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
 				B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */,
 			);

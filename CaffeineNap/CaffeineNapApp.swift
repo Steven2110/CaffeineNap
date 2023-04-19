@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CaffeineNapApp: App {
+    @AppStorage("isDarkMode") private var isDarkMode = false
     var body: some Scene {
         WindowGroup {
             CNTabView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

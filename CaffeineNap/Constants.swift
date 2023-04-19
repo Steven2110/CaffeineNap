@@ -31,3 +31,15 @@ enum Category: String, CaseIterable {
     case sodaED = "Soda & Energy drink"
 //        case medicine = "Medicine"
 }
+
+enum Language: String  {
+    case en
+    case ru
+    
+    var description : String {
+        switch self {
+        case .en: return "English"
+        case .ru: return "Russian"
+        }
+    }
+}

@@ -70,7 +70,7 @@ struct ProfileView: View {
                         NotificationsSettingView()
                     }
                     SettingRow(imageName: "rectangle.stack.badge.person.crop.fill", color: Color.green, text: "Interface") {
-                        Text("Interface")
+                        UISettingView()
                     }
                     SettingRow(imageName: "platter.2.filled.iphone", color: Color.orange, text: "Widget Style") {
                         Text("Widget Style")
