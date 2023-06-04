@@ -5,10 +5,20 @@
 //  Created by Steven Wijaya on 08.03.2023.
 //
 
-import Foundation
+import CloudKit
 
 struct MockData {
+    static var profile: CKRecord {
+        let record = CKRecord(recordType: "CNUser")
+        record["username"] = "steven2110"
+        record["firstName"] = "Steven"
+        record["lastName"] = "Wijaya"
+        
+        return record
+    }
+    
     static let customDrinks: [Beverage] = [Beverage]()
+    
     static let coffee: [Beverage] = [
         Beverage(
             icon: "espresso-cup",
