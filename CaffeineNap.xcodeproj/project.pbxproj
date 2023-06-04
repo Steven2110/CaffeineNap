@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEC29F02B1000238E68 /* UISettingView.swift */; };
 		B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */; };
+		B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABF029F3E90800238E68 /* CNProfile.swift */; };
 		B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */; };
 		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
 		B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */; };
@@ -16,6 +17,7 @@
 		B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogView.swift */; };
 		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
 		B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB50D29BB59540076058B /* XDismissButton.swift */; };
+		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
@@ -38,11 +40,15 @@
 		B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */; };
 		B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */; };
 		B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */; };
+		B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF61892A0104E7009F272E /* AvatarView.swift */; };
+		B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618C2A0119CB009F272E /* PhotoPicker.swift */; };
+		B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618E2A0132AB009F272E /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B04CABEC29F02B1000238E68 /* UISettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingView.swift; sourceTree = "<group>"; };
 		B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNThemeToggle.swift; sourceTree = "<group>"; };
+		B04CABF029F3E90800238E68 /* CNProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfile.swift; sourceTree = "<group>"; };
 		B04DB4E629BAFFA80076058B /* MetabolicParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicParameterView.swift; sourceTree = "<group>"; };
 		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettingView.swift; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 		B04DB4EE29BB4BAF0076058B /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
 		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
 		B04DB50D29BB59540076058B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +81,9 @@
 		B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
+		B0EF61892A0104E7009F272E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		B0EF618C2A0119CB009F272E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		B0EF618E2A0132AB009F272E /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,7 @@
 		B04DB50C29BB59470076058B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B0EF618B2A0119B1009F272E /* UIKitComponents */,
 				B04DB50D29BB59540076058B /* XDismissButton.swift */,
 				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
 			);
@@ -150,6 +161,7 @@
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
 				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
 				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
+				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
@@ -184,6 +196,7 @@
 		B0C64DDC29B5F7D400C3BC07 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -192,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DF529B88B3D00C3BC07 /* Beverage.swift */,
+				B04CABF029F3E90800238E68 /* CNProfile.swift */,
 				B04DB4EC29BB2D610076058B /* DayNotification.swift */,
 				B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */,
 				B0C64DF329B8803000C3BC07 /* MockData.swift */,
@@ -233,9 +247,18 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */,
+				B0EF61892A0104E7009F272E /* AvatarView.swift */,
 				B04DB4E429BABC770076058B /* Settings */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		B0EF618B2A0119B1009F272E /* UIKitComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B0EF618C2A0119CB009F272E /* PhotoPicker.swift */,
+			);
+			path = UIKitComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,12 +338,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
+				B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */,
+				B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */,
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
 				B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */,
 				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
+				B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */,
 				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
@@ -341,6 +368,7 @@
 				B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
 				B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */,
+				B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

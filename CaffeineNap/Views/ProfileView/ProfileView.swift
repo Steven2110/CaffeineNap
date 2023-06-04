@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @State private var avatar: UIImage = ImagePlaceHolder.avatar
     @State private var username: String = ""
     @State private var firstName: String = ""
     @State private var lastName: String = ""
@@ -16,15 +17,19 @@ struct ProfileView: View {
     @State private var watchAppInstalled: Bool = true
     @State private var pressed: Bool = false
     
+    @State private var isShowingPhotoPicker: Bool = false
+    
+    @State private var alertItem: AlertItem?
+    
     var body: some View {
         NavigationView {
             List {
                 Section {
                     HStack {
                         ZStack {
-                            profilePicture
+                            AvatarView(image: avatar, size: 100)
                             editProfilePicture
-                        }
+                        }.onTapGesture { isShowingPhotoPicker = true }
                         VStack {
                             HStack(alignment: .lastTextBaseline) {
                                 TextField("Username", text: $username)
@@ -47,6 +52,7 @@ struct ProfileView: View {
                     ZStack {
                         Button {
                             pressed = true
+                            createProfile()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                 pressed = false
                             }
@@ -120,13 +126,19 @@ struct ProfileView: View {
                         Text("About developer")
                     }
                 } header: {
-                    Text("Support and Resrouces")
+                    Text("Support and Resources")
                 } footer: {
                     Text("v 1.0.0")
                 }
             }
             .navigationTitle("Profile & Settings")
             .navigationBarHidden(true)
+            .alert(item: $alertItem, content: { alertItem in
+                Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+            })
+            .sheet(isPresented: $isShowingPhotoPicker) {
+                PhotoPicker(image: $avatar)
+            }
         }
     }
 }
@@ -138,14 +150,6 @@ struct ProfileView_Previews: PreviewProvider {
 }
 
 extension ProfileView {
-    private var profilePicture: some View {
-        Image(uiImage: ImagePlaceHolder.avatar)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 100, height: 100)
-            .clipShape(Circle())
-    }
-    
     private var editProfilePicture: some View {
         Image(systemName: "square.and.pencil")
             .resizable()
@@ -176,5 +180,25 @@ extension ProfileView {
         Text("CaffeineNap")
             .bold()
             .font(.title2)
+    }
+    
+    func isValidProfile() -> Bool {
+        
+        guard !firstName.isEmpty,
+              firstName.count <= 100,
+              !lastName.isEmpty,
+              lastName.count <= 100,
+              !username.isEmpty,
+              username.count <= 20,
+              avatar != ImagePlaceHolder.avatar else { return false }
+        
+        return true
+    }
+    
+    func createProfile() {
+        guard isValidProfile() else {
+            alertItem = AlertContext.invalidProfile
+            return
+        }
     }
 }
