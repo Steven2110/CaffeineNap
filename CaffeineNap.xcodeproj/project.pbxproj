@@ -18,6 +18,8 @@
 		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
 		B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB50D29BB59540076058B /* XDismissButton.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
+		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
+		B07047EB2A2C6E780035CFE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047EA2A2C6E780035CFE3 /* Constants.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
 		B04DB50D29BB59540076058B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
+		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		B07047EA2A2C6E780035CFE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +140,16 @@
 			path = AddDrinkLog;
 			sourceTree = "<group>";
 		};
+		B07047E92A2C6E5F0035CFE3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DE029B5FECF00C3BC07 /* Extensions */,
+				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
+				B07047EA2A2C6E780035CFE3 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B0C64DBC29B5ED0700C3BC07 = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +175,7 @@
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
 				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
 				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
-				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
-				B0C64DE029B5FECF00C3BC07 /* Extensions */,
+				B07047E92A2C6E5F0035CFE3 /* Utilities */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
 				B0C64DDB29B5F7CF00C3BC07 /* Views */,
@@ -218,6 +231,7 @@
 			children = (
 				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
 				B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */,
+				B07047E72A2C69330035CFE3 /* UIImageExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B07047EB2A2C6E780035CFE3 /* Constants.swift in Sources */,
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
@@ -359,6 +374,7 @@
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
 				B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
+				B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
