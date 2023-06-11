@@ -41,6 +41,7 @@ struct CNTabView: View {
                 previousSelectedItem = newValue
             }
         }
+        .onAppear { CloudKitManager.shared.getUserRecord() }
         .sheet(isPresented: $isPresentingAddSheet) {
             AddLogView(showParentSheet: $isPresentingAddSheet)
         }

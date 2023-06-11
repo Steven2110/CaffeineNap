@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct ProfileView: View {
     
-    @State private var avatar: UIImage = ImagePlaceHolder.avatar
-    @State private var username: String = ""
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
+    @StateObject private var vm: CNProfileViewModel = CNProfileViewModel()
     
     @State private var watchAppInstalled: Bool = true
-    @State private var pressed: Bool = false
     
     @State private var isShowingPhotoPicker: Bool = false
     
@@ -25,48 +22,32 @@ struct ProfileView: View {
         NavigationView {
             List {
                 Section {
-                    HStack {
-                        ZStack {
-                            AvatarView(image: avatar, size: 100)
-                            editProfilePicture
-                        }.onTapGesture { isShowingPhotoPicker = true }
-                        VStack {
-                            HStack(alignment: .lastTextBaseline) {
-                                TextField("Username", text: $username)
-                                    .usernameStyle()
-                                ForEach(0..<3, id: \.self) { _ in
-                                    badge
-                                }
-                                Spacer()
-                            }
-                            TextField("First Name", text: $firstName)
-                                .profileNameStyle()
-                            TextField("Last Name", text: $lastName)
-                                .profileNameStyle()
-                            Spacer()
-                        }
-                        Spacer()
-                    }
-                    .padding()
-                    .listRowBackground(Color.brandSecondary)
                     ZStack {
-                        Button {
-                            pressed = true
-                            createProfile()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                pressed = false
-                            }
-                        } label: {
-                            HStack {
+                        HStack {
+                            profilePicture.onTapGesture { isShowingPhotoPicker = true }
+                            VStack {
+                                HStack(alignment: .lastTextBaseline) {
+                                    TextField("Username", text: $vm.username).usernameStyle()
+                                    ForEach(0..<3, id: \.self) { _ in
+                                        badge
+                                    }
+                                    Spacer()
+                                }
+                                TextField("First Name", text: $vm.firstName).profileNameStyle()
+                                TextField("Last Name", text: $vm.lastName).profileNameStyle()
                                 Spacer()
-                                Text("Save Profile").foregroundColor(.brandSecondary)
                             }
-                        }.disabled(pressed)
-                        if pressed {
-                            ProgressView()
-                                .progressViewStyle(CircularProgressViewStyle(tint: Color.brandSecondary))
-                        }
-                    }.listRowBackground(Color.brandPrimary)
+                            Spacer()
+                        }.padding()
+                        if vm.isLoading { LoadingView() }
+                    }.listRowBackground(Color.brandSecondary)
+                    Button {
+                        vm.profileContext == .create ? vm.createProfile() : vm.updateProfile()
+                    } label: {
+                        ProfileButton(title: vm.profileContext == .create ? "Create Profile" : "Save Profile")
+                    }
+                    .disabled(vm.isLoading)
+                    .listRowBackground(Color.brandPrimary)
                 }
                 Section("Personalization") {
                     SettingRow(imageName: "dial.medium.fill", color: Color.red, text: "Metabolic Parameters") {
@@ -133,11 +114,14 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile & Settings")
             .navigationBarHidden(true)
-            .alert(item: $alertItem, content: { alertItem in
+            .onAppear {
+                vm.getProfile()
+            }
+            .alert(item: $vm.alertItem, content: { alertItem in
                 Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
             })
             .sheet(isPresented: $isShowingPhotoPicker) {
-                PhotoPicker(image: $avatar)
+                PhotoPicker(image: $vm.avatar)
             }
         }
     }
@@ -149,7 +133,27 @@ struct ProfileView_Previews: PreviewProvider {
     }
 }
 
+struct ProfileButton: View {
+    
+    var title: String
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(title).foregroundColor(.brandSecondary)
+        }
+    }
+}
+
 extension ProfileView {
+    
+    private var profilePicture: some View {
+        ZStack {
+            AvatarView(image: vm.avatar, size: 100)
+            editProfilePicture
+        }
+    }
+    
     private var editProfilePicture: some View {
         Image(systemName: "square.and.pencil")
             .resizable()
@@ -180,25 +184,5 @@ extension ProfileView {
         Text("CaffeineNap")
             .bold()
             .font(.title2)
-    }
-    
-    func isValidProfile() -> Bool {
-        
-        guard !firstName.isEmpty,
-              firstName.count <= 100,
-              !lastName.isEmpty,
-              lastName.count <= 100,
-              !username.isEmpty,
-              username.count <= 20,
-              avatar != ImagePlaceHolder.avatar else { return false }
-        
-        return true
-    }
-    
-    func createProfile() {
-        guard isValidProfile() else {
-            alertItem = AlertContext.invalidProfile
-            return
-        }
     }
 }

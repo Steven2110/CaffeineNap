@@ -17,12 +17,13 @@
 		B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogView.swift */; };
 		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
 		B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB50D29BB59540076058B /* XDismissButton.swift */; };
+		B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */; };
+		B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */; };
+		B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
-		B07047EB2A2C6E780035CFE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047EA2A2C6E780035CFE3 /* Constants.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
-		B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCF29B5ED0800C3BC07 /* Preview Assets.xcassets */; };
 		B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD729B5ED5200C3BC07 /* .gitignore */; };
 		B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD929B5ED5E00C3BC07 /* README.md */; };
 		B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */; };
@@ -58,9 +59,11 @@
 		B04DB4EE29BB4BAF0076058B /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
 		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
 		B04DB50D29BB59540076058B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExt.swift; sourceTree = "<group>"; };
+		B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
-		B07047EA2A2C6E780035CFE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 			children = (
 				B0EF618B2A0119B1009F272E /* UIKitComponents */,
 				B04DB50D29BB59540076058B /* XDismissButton.swift */,
+				B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */,
 				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
 			);
 			path = CustomViews;
@@ -145,7 +149,8 @@
 			children = (
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
-				B07047EA2A2C6E780035CFE3 /* Constants.swift */,
+				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
+				B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -173,7 +178,6 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
-				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
 				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
 				B07047E92A2C6E5F0035CFE3 /* Utilities */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
@@ -230,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
+				B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */,
 				B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */,
 				B07047E72A2C69330035CFE3 /* UIImageExt.swift */,
 			);
@@ -337,7 +342,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C64DD029B5ED0800C3BC07 /* Preview Assets.xcassets in Resources */,
 				B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */,
 				B0C64DDA29B5ED5E00C3BC07 /* README.md in Resources */,
 				B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */,
@@ -352,10 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
-				B07047EB2A2C6E780035CFE3 /* Constants.swift in Sources */,
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
+				B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */,
 				B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */,
@@ -368,6 +372,7 @@
 				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
+				B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */,
 				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
 				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
 				B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */,
@@ -376,6 +381,7 @@
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
+				B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
@@ -527,7 +533,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwik.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KwikBianDhoan.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,7 +563,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwik.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KwikBianDhoan.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

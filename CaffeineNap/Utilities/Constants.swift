@@ -7,6 +7,21 @@
 
 import UIKit
 
+enum RecordType {
+    static let profile = "CNProfile"
+}
+
+enum ImageDimension {
+    case avatar
+    
+    var placeholder: UIImage {
+        switch self {
+        case .avatar:
+            return ImagePlaceHolder.avatar
+        }
+    }
+}
+
 enum ImagePlaceHolder {
     static let avatar = UIImage(named: "default-avatar")!
 }

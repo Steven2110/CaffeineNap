@@ -21,7 +21,7 @@ extension UIImage {
         let fileUrl = urlPath.appendingPathComponent("selectedAvatarImage")
         
         // Write the image data to the location the address points to
-        guard let imageData = jpegData(compressionQuality: 0.25) else { return nil }
+        guard let imageData = jpegData(compressionQuality: 0.5) else { return nil }
         
         //Create our CKAsset with that fileURL
         do {
