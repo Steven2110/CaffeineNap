@@ -122,4 +122,11 @@ final class CloudKitManager {
         
         return beverages
     }
+    
+    func deleteRecord(id: CKRecord.ID) async throws -> CKRecord.ID {
+        
+        let deletedRecord = try await container.privateCloudDatabase.deleteRecord(withID: id)
+        
+        return deletedRecord
+    }
 }
