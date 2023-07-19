@@ -1,5 +1,5 @@
 //
-//  AddLogView.swift
+//  AddLogBeverageListView.swift
 //  CaffeineNap
 //
 //  Created by Steven Wijaya on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddLogView: View {
+struct AddLogBeverageListView: View {
     
     @Binding var showParentSheet: Bool
     @Environment(\.dismiss) var dismiss
@@ -39,7 +39,7 @@ struct AddLogView: View {
                     } else {
                         List(selectedList, id: \.id) { item in
                             NavigationLink {
-                                DrinkAddLogView(showParentSheet: $showParentSheet, vm: BeverageDetailViewModel(beverage: item))
+                                AddLogBeverageDetailView(showParentSheet: $showParentSheet, vm: BeverageDetailViewModel(beverage: item))
                                     .toolbar {
                                         Button { dismiss() } label: {
                                             XDismissButton()
@@ -75,9 +75,10 @@ struct AddLogView: View {
     }
 }
 
-struct AddView_Previews: PreviewProvider {
+struct AddLogBeverageListView_Previews: PreviewProvider {
     static var previews: some View {
-        AddLogView(showParentSheet: .constant(true))
+        AddLogBeverageListView(showParentSheet: .constant(true))
+            .environmentObject(CNBeverageManager())
     }
 }
 
@@ -135,7 +136,7 @@ struct ListRowView: View {
     }
 }
 
-extension AddLogView {
+extension AddLogBeverageListView {
     private func getSelectedList(selectedCategory: Category) -> [CNBeverage] {
         switch(selectedCategory) {
         case .all:

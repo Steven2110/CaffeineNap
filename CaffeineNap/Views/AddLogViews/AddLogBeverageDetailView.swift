@@ -1,5 +1,5 @@
 //
-//  DrinkAddLogView.swift
+//  AddLogBeverageDetailView.swift
 //  CaffeineNap
 //
 //  Created by Steven Wijaya on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DrinkAddLogView: View {
+struct AddLogBeverageDetailView: View {
     
     @Binding var showParentSheet: Bool
     
@@ -80,15 +80,15 @@ struct DrinkAddLogView: View {
     }
 }
 
-struct DrinkAddLogView_Previews: PreviewProvider {
+struct AddLogBeverageDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkAddLogView(showParentSheet: .constant(true), vm: BeverageDetailViewModel(beverage: MockData.coffee[0]))
+            AddLogBeverageDetailView(showParentSheet: .constant(true), vm: BeverageDetailViewModel(beverage: MockData.coffee[0]))
         }
     }
 }
 
-extension DrinkAddLogView {
+extension AddLogBeverageDetailView {
     private var beverageIcon: some View {
         Image(vm.beverage.icon)
             .resizable()

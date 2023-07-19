@@ -18,8 +18,8 @@
 		B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4E829BB219F0076058B /* AppIconView.swift */; };
 		B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */; };
 		B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EC29BB2D610076058B /* DayNotification.swift */; };
-		B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogView.swift */; };
-		B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */; };
+		B04DB4EF29BB4BAF0076058B /* AddLogBeverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4EE29BB4BAF0076058B /* AddLogBeverageListView.swift */; };
+		B04DB4F129BB4E980076058B /* AddLogBeverageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB4F029BB4E980076058B /* AddLogBeverageDetailView.swift */; };
 		B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB50D29BB59540076058B /* XDismissButton.swift */; };
 		B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */; };
 		B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */; };
@@ -70,8 +70,8 @@
 		B04DB4E829BB219F0076058B /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		B04DB4EA29BB2BD20076058B /* NotificationsSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettingView.swift; sourceTree = "<group>"; };
 		B04DB4EC29BB2D610076058B /* DayNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNotification.swift; sourceTree = "<group>"; };
-		B04DB4EE29BB4BAF0076058B /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
-		B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkAddLogView.swift; sourceTree = "<group>"; };
+		B04DB4EE29BB4BAF0076058B /* AddLogBeverageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogBeverageListView.swift; sourceTree = "<group>"; };
+		B04DB4F029BB4E980076058B /* AddLogBeverageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogBeverageDetailView.swift; sourceTree = "<group>"; };
 		B04DB50D29BB59540076058B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExt.swift; sourceTree = "<group>"; };
 		B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		B04DB51229BC8FFF0076058B /* AddLogViews */ = {
 			isa = PBXGroup;
 			children = (
-				B04DB4EE29BB4BAF0076058B /* AddLogView.swift */,
-				B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */,
+				B04DB4EE29BB4BAF0076058B /* AddLogBeverageListView.swift */,
+				B04DB4F029BB4E980076058B /* AddLogBeverageDetailView.swift */,
 			);
 			path = AddLogViews;
 			sourceTree = "<group>";
@@ -418,10 +418,10 @@
 				B0FDE8832A5EE9090061F620 /* CustomBeverageViewModel.swift in Sources */,
 				B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */,
 				B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */,
-				B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */,
+				B04DB4EF29BB4BAF0076058B /* AddLogBeverageListView.swift in Sources */,
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
 				B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */,
-				B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */,
+				B04DB4F129BB4E980076058B /* AddLogBeverageDetailView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
 				B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */,
 				B0E7B9212A613FC600ADB0C7 /* BeverageDetailViewModel.swift in Sources */,

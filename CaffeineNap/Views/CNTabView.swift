@@ -57,7 +57,7 @@ struct CNTabView: View {
             }
         }
         .sheet(isPresented: $isPresentingAddSheet) {
-            AddLogView(showParentSheet: $isPresentingAddSheet)
+            AddLogBeverageListView(showParentSheet: $isPresentingAddSheet)
         }
 
     }
