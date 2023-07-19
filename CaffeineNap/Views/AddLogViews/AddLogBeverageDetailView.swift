@@ -52,10 +52,8 @@ struct AddLogBeverageDetailView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.top)
                 HStack(spacing: 5) {
-                    Spacer()
                     caffeineIcon
                     Text("\((vm.selectedVolume?.amount ?? 0.0) * Double(vm.amount), specifier: "%.2f") mg").font(.title)
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.bottom)
