@@ -129,4 +129,27 @@ final class CloudKitManager {
         
         return deletedRecord
     }
+    
+    func fetchVolumeCaffeineAmounts(_ from: DatabaseType = .privateDB, for beverage: CKRecord.ID) async throws -> [VolumeCaffeineAmount] {
+        
+        var volumeCaffeineAmounts: [VolumeCaffeineAmount] = []
+        // Initialize sorting
+        let sortVolume = NSSortDescriptor(key: VolumeCaffeineAmount.kVolume, ascending: true)
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.volumeCaffeineAmount, predicate: NSPredicate(format: "beverage == %@", beverage))
+        query.sortDescriptors = [sortVolume]
+        
+        // To get from which database container we should query our request
+        let database = getDatabaseContainer(from)
+        
+        let result = try await database.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        for record in records {
+            let volumeCaffeineAmount = VolumeCaffeineAmount(record: record)
+            volumeCaffeineAmounts.append(volumeCaffeineAmount)
+        }
+        
+        return volumeCaffeineAmounts
+    }
 }

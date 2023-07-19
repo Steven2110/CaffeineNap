@@ -31,7 +31,7 @@ struct CNBeveragesListView: View {
                 if !vm.selectedList.isEmpty {
                     List(vm.selectedList, id: \.id) { item in
                         NavigationLink {
-                            Text("Beverage Detail View")
+                            CNBeverageDetailView(vm: BeverageDetailViewModel(beverage: item))
                                 .navigationTitle(item.name)
                                 .navigationBarTitleDisplayMode(.inline)
                         } label: {
