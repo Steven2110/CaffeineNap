@@ -58,4 +58,35 @@ struct AlertContext {
         message: Text("We were unable to update your CaffeineNap profile at this time.\nPlease try again later."),
         dismissButton: .default(Text("Ok"))
     )
+    
+    // MARK: - Add custom beverages errors
+    static let errorBeverageField = AlertItem(
+        title: Text("Missing or Wrong Input"),
+        message: Text("One of the beverage's general information is not filled or there are some mistakes.\nPlease check and try again."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let errorCaffeineVolumeField = AlertItem(
+        title: Text("Missing or Wrong Input"),
+        message: Text("One of the beverage's caffeine or volume field is not filled or there are some mistakes.\nPlease check and try again."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedSavingCaffeineVolume = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to save beverage's Volume and Caffeine Amount to CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let successSavingBeverage = AlertItem(
+        title: Text("Successfully Saved Beverage"),
+        message: Text("Saving beverage done successfully."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedSavingBeverage = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to save beverage to CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
 }

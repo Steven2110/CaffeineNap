@@ -43,4 +43,11 @@ final class CNBeverageManager: ObservableObject {
         }
         
     }
+    
+    func add(_ beverage: CNBeverage) {
+        DispatchQueue.main.async {
+            self.beverages.append(beverage)
+            self.sort()
+        }
+    }
 }

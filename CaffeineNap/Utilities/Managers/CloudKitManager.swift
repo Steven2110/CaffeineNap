@@ -49,6 +49,15 @@ final class CloudKitManager {
         }
     }
        
+    func batchSave(_ database: DatabaseType = .privateDB, records: [CKRecord]) async throws -> [CKRecord] {
+    
+        let database = getDatabaseContainer(database)
+    
+        let (savedResult, _) = try await database.modifyRecords(saving: records, deleting: [])
+        print(savedResult)
+        return savedResult.compactMap { _, result in try? result.get() }
+    }
+    
     func batchSave(records: [CKRecord], completed: @escaping (Result<[CKRecord], Error>) -> Void) {
         // Create CKOperation to batch save our User and Profile records
         let operation = CKModifyRecordsOperation(recordsToSave: records)
@@ -62,6 +71,13 @@ final class CloudKitManager {
         }
         
         CKContainer.default().publicCloudDatabase.add(operation)
+    }
+    
+    func save(_ to: DatabaseType = .privateDB, record: CKRecord) async throws -> CKRecord {
+    
+        let database = getDatabaseContainer(to)
+    
+        return try await database.save(record)
     }
     
     func save(record: CKRecord, completed: @escaping (Result<CKRecord, Error>) -> Void) {

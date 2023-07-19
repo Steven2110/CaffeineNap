@@ -24,7 +24,6 @@
 		B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */; };
 		B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */; };
 		B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */; };
-		B06D4B9A2A67DDB900980FCA /* Temporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4B992A67DDB900980FCA /* Temporary.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
@@ -52,7 +51,6 @@
 		B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */; };
 		B0E7B9212A613FC600ADB0C7 /* BeverageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */; };
 		B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */; };
-		B0E7B9262A668BBE00ADB0C7 /* AddLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */; };
 		B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF61892A0104E7009F272E /* AvatarView.swift */; };
 		B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618C2A0119CB009F272E /* PhotoPicker.swift */; };
 		B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618E2A0132AB009F272E /* AlertItem.swift */; };
@@ -78,7 +76,6 @@
 		B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExt.swift; sourceTree = "<group>"; };
 		B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		B06D4B992A67DDB900980FCA /* Temporary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temporary.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +106,6 @@
 		B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCustomBeverageListView.swift; sourceTree = "<group>"; };
 		B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewModel.swift; sourceTree = "<group>"; };
 		B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageManager.swift; sourceTree = "<group>"; };
-		B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogViewModel.swift; sourceTree = "<group>"; };
 		B0EF61892A0104E7009F272E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B0EF618C2A0119CB009F272E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		B0EF618E2A0132AB009F272E /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -152,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EF618B2A0119B1009F272E /* UIKitComponents */,
+				B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */,
 				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
 				B0FDE8842A5EE9650061F620 /* CustomTextField.swift */,
 				B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */,
@@ -228,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
-				B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */,
 				B04DB51229BC8FFF0076058B /* AddDrinkLog */,
 				B04DB50C29BB59470076058B /* CustomViews */,
 				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
@@ -244,7 +240,6 @@
 				B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */,
 				B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */,
 				B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */,
-				B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */,
 				B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */,
 			);
 			path = ViewModels;
@@ -310,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */,
-				B06D4B992A67DDB900980FCA /* Temporary.swift */,
 				B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */,
 			);
 			path = Managers;
@@ -412,13 +406,11 @@
 				B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */,
 				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
 				B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */,
-				B06D4B9A2A67DDB900980FCA /* Temporary.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */,
 				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
 				B0FDE8852A5EE9650061F620 /* CustomTextField.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
-				B0E7B9262A668BBE00ADB0C7 /* AddLogViewModel.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */,
 				B0C64DF629B88B3D00C3BC07 /* CNBeverage.swift in Sources */,
