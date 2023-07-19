@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct LoadingView: View {
+    
+    var withColor: Bool = true
+    var color: Color = .brandSecondary
+    
     var body: some View {
         ZStack {
-            Color.brandSecondary
-                .opacity(0.75)
-                .ignoresSafeArea()
+            if withColor {
+                color
+                    .opacity(0.75)
+                    .ignoresSafeArea()
+            }
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: Color.brandPrimary))
                 .scaleEffect(2.0)

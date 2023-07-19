@@ -11,6 +11,7 @@ struct CNTabView: View {
     
     @State private var selectedItem = 1
     @State private var previousSelectedItem = 1
+    @EnvironmentObject private var beverageManager: CNBeverageManager
     
     @State private var isPresentingAddSheet = false
     
@@ -25,7 +26,9 @@ struct CNTabView: View {
             Text("Add Drinks Page/Sheet!")
                 .tabItem{ Label("Add Drinks", systemImage: "plus.circle").environment(\.symbolVariants, .none) }
                 .tag(3)
-            CNBeveragesListView()
+            NavigationView {
+                CNBeveragesListView()
+            }
                 .tabItem{ Label("Beverages", systemImage: "cup.and.saucer") }
                 .tag(4)
             ProfileView()
@@ -41,7 +44,18 @@ struct CNTabView: View {
                 previousSelectedItem = newValue
             }
         }
-        .onAppear { CloudKitManager.shared.getUserRecord() }
+        .onAppear {
+            CloudKitManager.shared.getUserRecord()
+            Task {
+                if beverageManager.beverages.isEmpty {
+                    do {
+                        beverageManager.beverages = try await CloudKitManager.shared.fetchBeveragesList()
+                    } catch {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
         .sheet(isPresented: $isPresentingAddSheet) {
             AddLogView(showParentSheet: $isPresentingAddSheet)
         }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */; };
+		B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725C2A3879C7004E2C99 /* CKRecordExt.swift */; };
+		B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */; };
+		B04572612A389E05004E2C99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04572602A389E05004E2C99 /* Utilities.swift */; };
 		B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEC29F02B1000238E68 /* UISettingView.swift */; };
 		B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */; };
 		B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04CABF029F3E90800238E68 /* CNProfile.swift */; };
@@ -20,6 +24,7 @@
 		B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */; };
 		B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */; };
 		B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */; };
+		B06D4B9A2A67DDB900980FCA /* Temporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4B992A67DDB900980FCA /* Temporary.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
@@ -36,19 +41,30 @@
 		B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */; };
 		B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */; };
 		B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF329B8803000C3BC07 /* MockData.swift */; };
-		B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF529B88B3D00C3BC07 /* Beverage.swift */; };
+		B0C64DF629B88B3D00C3BC07 /* CNBeverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */; };
 		B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */; };
 		B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */; };
 		B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DFB29B9C27300C3BC07 /* Constants.swift */; };
 		B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */; };
 		B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */; };
 		B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */; };
+		B0DDF64B2A56BA870097E5B6 /* CNCustomBeverageAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */; };
+		B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */; };
+		B0E7B9212A613FC600ADB0C7 /* BeverageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */; };
+		B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */; };
+		B0E7B9262A668BBE00ADB0C7 /* AddLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */; };
 		B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF61892A0104E7009F272E /* AvatarView.swift */; };
 		B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618C2A0119CB009F272E /* PhotoPicker.swift */; };
 		B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618E2A0132AB009F272E /* AlertItem.swift */; };
+		B0FDE8832A5EE9090061F620 /* CustomBeverageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */; };
+		B0FDE8852A5EE9650061F620 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FDE8842A5EE9650061F620 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageListViewModel.swift; sourceTree = "<group>"; };
+		B045725C2A3879C7004E2C99 /* CKRecordExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExt.swift; sourceTree = "<group>"; };
+		B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageDetailView.swift; sourceTree = "<group>"; };
+		B04572602A389E05004E2C99 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B04CABEC29F02B1000238E68 /* UISettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingView.swift; sourceTree = "<group>"; };
 		B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNThemeToggle.swift; sourceTree = "<group>"; };
 		B04CABF029F3E90800238E68 /* CNProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfile.swift; sourceTree = "<group>"; };
@@ -62,6 +78,7 @@
 		B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExt.swift; sourceTree = "<group>"; };
 		B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B06D4B992A67DDB900980FCA /* Temporary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temporary.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,16 +98,23 @@
 		B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
 		B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeveragesListView.swift; sourceTree = "<group>"; };
 		B0C64DF329B8803000C3BC07 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		B0C64DF529B88B3D00C3BC07 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverage.swift; sourceTree = "<group>"; };
 		B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		B0C64DF929B9BF8500C3BC07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B0C64DFB29B9C27300C3BC07 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		B0C64E0329BA0FC400C3BC07 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
+		B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNCustomBeverageAddView.swift; sourceTree = "<group>"; };
+		B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCustomBeverageListView.swift; sourceTree = "<group>"; };
+		B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewModel.swift; sourceTree = "<group>"; };
+		B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageManager.swift; sourceTree = "<group>"; };
+		B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogViewModel.swift; sourceTree = "<group>"; };
 		B0EF61892A0104E7009F272E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B0EF618C2A0119CB009F272E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		B0EF618E2A0132AB009F272E /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBeverageViewModel.swift; sourceTree = "<group>"; };
+		B0FDE8842A5EE9650061F620 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				B0EF618B2A0119B1009F272E /* UIKitComponents */,
-				B04DB50D29BB59540076058B /* XDismissButton.swift */,
-				B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */,
 				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
+				B0FDE8842A5EE9650061F620 /* CustomTextField.swift */,
+				B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */,
+				B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */,
+				B04DB50D29BB59540076058B /* XDismissButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -148,9 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
+				B0E7B9222A6147D200ADB0C7 /* Managers */,
 				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
 				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
-				B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */,
+				B04572602A389E05004E2C99 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -201,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
+				B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */,
 				B04DB51229BC8FFF0076058B /* AddDrinkLog */,
 				B04DB50C29BB59470076058B /* CustomViews */,
 				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
@@ -213,6 +241,10 @@
 		B0C64DDC29B5F7D400C3BC07 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */,
+				B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */,
+				B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */,
+				B0E7B9252A668BBE00ADB0C7 /* AddLogViewModel.swift */,
 				B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */,
 			);
 			path = ViewModels;
@@ -221,7 +253,7 @@
 		B0C64DDD29B5F7D900C3BC07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B0C64DF529B88B3D00C3BC07 /* Beverage.swift */,
+				B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */,
 				B04CABF029F3E90800238E68 /* CNProfile.swift */,
 				B04DB4EC29BB2D610076058B /* DayNotification.swift */,
 				B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */,
@@ -235,6 +267,7 @@
 			children = (
 				B0C64DE129B5FED900C3BC07 /* ColorExt.swift */,
 				B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */,
+				B045725C2A3879C7004E2C99 /* CKRecordExt.swift */,
 				B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */,
 				B07047E72A2C69330035CFE3 /* UIImageExt.swift */,
 			);
@@ -258,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DF129B71D5C00C3BC07 /* CNBeveragesListView.swift */,
+				B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */,
 			);
 			path = BeveragesView;
 			sourceTree = "<group>";
@@ -270,6 +304,16 @@
 				B04DB4E429BABC770076058B /* Settings */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		B0E7B9222A6147D200ADB0C7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */,
+				B06D4B992A67DDB900980FCA /* Temporary.swift */,
+				B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		B0EF618B2A0119B1009F272E /* UIKitComponents */ = {
@@ -356,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B0DDF64B2A56BA870097E5B6 /* CNCustomBeverageAddView.swift in Sources */,
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
@@ -367,22 +412,32 @@
 				B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */,
 				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
 				B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */,
+				B06D4B9A2A67DDB900980FCA /* Temporary.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */,
 				B0C64DFC29B9C27300C3BC07 /* Constants.swift in Sources */,
+				B0FDE8852A5EE9650061F620 /* CustomTextField.swift in Sources */,
 				B0C64DE229B5FED900C3BC07 /* ColorExt.swift in Sources */,
+				B0E7B9262A668BBE00ADB0C7 /* AddLogViewModel.swift in Sources */,
 				B0C64DEB29B6FDAD00C3BC07 /* HeartRateInfo.swift in Sources */,
 				B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */,
-				B0C64DF629B88B3D00C3BC07 /* Beverage.swift in Sources */,
+				B0C64DF629B88B3D00C3BC07 /* CNBeverage.swift in Sources */,
 				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
+				B0FDE8832A5EE9090061F620 /* CustomBeverageViewModel.swift in Sources */,
+				B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */,
+				B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */,
 				B04DB4EF29BB4BAF0076058B /* AddLogView.swift in Sources */,
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
+				B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */,
 				B04DB4F129BB4E980076058B /* DrinkAddLogView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
+				B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */,
+				B0E7B9212A613FC600ADB0C7 /* BeverageDetailViewModel.swift in Sources */,
 				B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */,
 				B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */,
 				B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
+				B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
 				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,
@@ -390,6 +445,7 @@
 				B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
 				B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */,
+				B04572612A389E05004E2C99 /* Utilities.swift in Sources */,
 				B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

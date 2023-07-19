@@ -9,6 +9,8 @@ import UIKit
 
 enum RecordType {
     static let profile = "CNProfile"
+    static let beverage = "CNBeverage"
+    static let volumeCaffeineAmount = "VolumeCaffeineAmount"
 }
 
 enum ImageDimension {
@@ -58,3 +60,5 @@ enum Language: String  {
         }
     }
 }
+
+let SPECIFIER: String = "%.2f"

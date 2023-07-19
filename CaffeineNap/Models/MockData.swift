@@ -17,10 +17,10 @@ struct MockData {
         return record
     }
     
-    static let customDrinks: [Beverage] = [Beverage]()
+    static let customDrinks: [CNBeverage] = [CNBeverage]()
     
-    static let coffee: [Beverage] = [
-        Beverage(
+    static let coffee: [CNBeverage] = [
+        CNBeverage(
             icon: "espresso-cup",
             name: "Espresso",
             base: .coffee,
@@ -32,7 +32,7 @@ struct MockData {
             ],
             caffeinePer100: 212
         ),
-        Beverage(
+        CNBeverage(
             icon: "coffee-cup",
             name: "Americano",
             base: .coffee,
@@ -44,7 +44,7 @@ struct MockData {
             ],
             caffeinePer100: 43.2
         ),
-        Beverage(
+        CNBeverage(
             icon: "coffee-cup",
             name: "Long Black",
             base: .coffee,
@@ -56,7 +56,7 @@ struct MockData {
             ],
             caffeinePer100: 43.2
         ),
-        Beverage(
+        CNBeverage(
             icon: "coffee-cup",
             name: "Black Coffee",
             base: .coffee,
@@ -68,7 +68,7 @@ struct MockData {
             ],
             caffeinePer100: 43.2
         ),
-        Beverage(
+        CNBeverage(
             icon: "takeaway-cup",
             name: "Cold Brew",
             base: .coffee,
@@ -80,7 +80,7 @@ struct MockData {
             ],
             caffeinePer100: 55.0887
         ),
-        Beverage(
+        CNBeverage(
             icon: "takeaway-cup",
             name: "Latte",
             base: .coffee,
@@ -92,7 +92,7 @@ struct MockData {
             ],
             caffeinePer100: 32.533
         ),
-        Beverage(
+        CNBeverage(
             icon: "coffee-cup",
             name: "Cappuccino",
             base: .coffee,
@@ -106,8 +106,8 @@ struct MockData {
         )
     ]
     
-    static let tea: [Beverage] = [
-        Beverage(
+    static let tea: [CNBeverage] = [
+        CNBeverage(
             icon: "tea-cup",
             name: "Black Tea",
             base: .tea,
@@ -117,7 +117,7 @@ struct MockData {
             ],
             caffeinePer100: 20.0
         ),
-        Beverage(
+        CNBeverage(
             icon: "tea-cup",
             name: "Green Tea",
             base: .tea,
@@ -127,7 +127,7 @@ struct MockData {
             ],
             caffeinePer100: 12.0
         ),
-        Beverage(
+        CNBeverage(
             icon: "tea-cup",
             name: "Matcha",
             base: .tea,
@@ -139,8 +139,8 @@ struct MockData {
         )
     ]
     
-    static let sodaED: [Beverage] = [
-        Beverage(
+    static let sodaED: [CNBeverage] = [
+        CNBeverage(
             icon: "can",
             name: "RedBull",
             base: .energyDrink,
@@ -151,7 +151,7 @@ struct MockData {
                 VolumeCaffeineAmount(type: .large, volume: 473.0, amount: 80.0)
             ]
         ),
-        Beverage(
+        CNBeverage(
             icon: "can",
             name: "Monster",
             base: .energyDrink,
@@ -160,7 +160,7 @@ struct MockData {
                 VolumeCaffeineAmount(type: .large, volume: 500.0, amount: 160.0)
             ]
         ),
-        Beverage(
+        CNBeverage(
             icon: "plastic-bottle",
             name: "Fire Ox",
             base: .energyDrink,
