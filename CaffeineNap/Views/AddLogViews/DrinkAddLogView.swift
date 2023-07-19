@@ -83,7 +83,7 @@ struct DrinkAddLogView: View {
 struct DrinkAddLogView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkAddLogView(showParentSheet: .constant(true), item: MockData.coffee[0], vm: BeverageDetailViewModel(beverage: MockData.coffee[0]))
+            DrinkAddLogView(showParentSheet: .constant(true), vm: BeverageDetailViewModel(beverage: MockData.coffee[0]))
         }
     }
 }
