@@ -11,17 +11,16 @@ struct AppIconView: View {
     
     private struct AppIcon: Identifiable, Equatable {
         var id: UUID = UUID()
-        var name: String = "icon-placeholder"
+        var name: String
     }
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     private var icons: [AppIcon] = [
-        AppIcon(),
-        AppIcon(),
-        AppIcon(),
-        AppIcon(),
-        AppIcon(),
-        AppIcon()
+        AppIcon(name: "Icon1"),
+        AppIcon(name: "Icon2"),
+        AppIcon(name: "Icon3"),
+        AppIcon(name: "Icon4"),
+        AppIcon(name: "Icon5")
     ]
     @State private var selectedIcon: [AppIcon] = [AppIcon]()
     
