@@ -24,6 +24,8 @@
 		B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */; };
 		B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */; };
 		B050F3CE2A2CB10D0045B2F8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */; };
+		B06D4B9E2A685BE900980FCA /* AddLogBeverageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4B9D2A685BE900980FCA /* AddLogBeverageViewModel.swift */; };
+		B06D4BA02A685D5B00980FCA /* CNLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4B9F2A685D5B00980FCA /* CNLog.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
@@ -76,6 +78,8 @@
 		B050F3C92A2C9DA50045B2F8 /* CKAssetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKAssetExt.swift; sourceTree = "<group>"; };
 		B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		B050F3CD2A2CB10D0045B2F8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B06D4B9D2A685BE900980FCA /* AddLogBeverageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogBeverageViewModel.swift; sourceTree = "<group>"; };
+		B06D4B9F2A685D5B00980FCA /* CNLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLog.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +241,7 @@
 		B0C64DDC29B5F7D400C3BC07 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B06D4B9D2A685BE900980FCA /* AddLogBeverageViewModel.swift */,
 				B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */,
 				B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */,
 				B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */,
@@ -249,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */,
+				B06D4B9F2A685D5B00980FCA /* CNLog.swift */,
 				B04CABF029F3E90800238E68 /* CNProfile.swift */,
 				B04DB4EC29BB2D610076058B /* DayNotification.swift */,
 				B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */,
@@ -394,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C64DE729B6EF8C00C3BC07 /* MainInfo.swift in Sources */,
+				B06D4B9E2A685BE900980FCA /* AddLogBeverageViewModel.swift in Sources */,
 				B0DDF64B2A56BA870097E5B6 /* CNCustomBeverageAddView.swift in Sources */,
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
@@ -433,6 +440,7 @@
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
 				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,
+				B06D4BA02A685D5B00980FCA /* CNLog.swift in Sources */,
 				B0C64DDF29B5F87900C3BC07 /* CNTabView.swift in Sources */,
 				B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,

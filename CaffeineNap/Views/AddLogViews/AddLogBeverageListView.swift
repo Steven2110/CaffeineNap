@@ -39,7 +39,7 @@ struct AddLogBeverageListView: View {
                     } else {
                         List(selectedList, id: \.id) { item in
                             NavigationLink {
-                                AddLogBeverageDetailView(showParentSheet: $showParentSheet, vm: BeverageDetailViewModel(beverage: item))
+                                AddLogBeverageDetailView(showParentSheet: $showParentSheet, vm: AddLogBeverageViewModel(beverage: item))
                                     .toolbar {
                                         Button { dismiss() } label: {
                                             XDismissButton()

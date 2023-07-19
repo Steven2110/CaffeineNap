@@ -92,6 +92,12 @@ final class CloudKitManager {
         }
     }
     
+    func fetchRecord(from db: DatabaseType = .publicDB, with id: CKRecord.ID) async throws -> CKRecord {
+        let database = getDatabaseContainer(db)
+        
+        return try await database.record(for: id)
+    }
+    
     func fetchRecord(with id: CKRecord.ID, completed: @escaping (Result<CKRecord, Error>) -> Void) {
         // Fetch data using ID
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: id) { record, error in
