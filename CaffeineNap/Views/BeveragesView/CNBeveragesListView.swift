@@ -62,7 +62,7 @@ struct CNBeveragesListView: View {
             }
         }
         .toolbar{
-            NavigationLink(destination: Text("Add Custom Drink View")) {
+            NavigationLink(destination: CNCustomBeverageAddView()) {
                 Image(systemName: "plus.circle")
             }
         }
