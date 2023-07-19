@@ -158,13 +158,13 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		B04DB51229BC8FFF0076058B /* AddDrinkLog */ = {
+		B04DB51229BC8FFF0076058B /* AddLogViews */ = {
 			isa = PBXGroup;
 			children = (
 				B04DB4EE29BB4BAF0076058B /* AddLogView.swift */,
 				B04DB4F029BB4E980076058B /* DrinkAddLogView.swift */,
 			);
-			path = AddDrinkLog;
+			path = AddLogViews;
 			sourceTree = "<group>";
 		};
 		B07047E92A2C6E5F0035CFE3 /* Utilities */ = {
@@ -225,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
-				B04DB51229BC8FFF0076058B /* AddDrinkLog */,
+				B04DB51229BC8FFF0076058B /* AddLogViews */,
 				B04DB50C29BB59470076058B /* CustomViews */,
 				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
 				B0C64DE529B6EF7000C3BC07 /* HomeView */,
