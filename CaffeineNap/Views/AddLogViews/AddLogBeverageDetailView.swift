@@ -12,8 +12,9 @@ struct AddLogBeverageDetailView: View {
     @Binding var showParentSheet: Bool
     
     @State private var selectedVolume: VolumeCaffeineAmount?
-    @State private var amount: Int = 1
+    @State private var amount: Double = 1
     @State private var timeDrink: Date = Date.now
+    @State private var specifier: String = "%.0f"
     
     @State private var showAlert: Bool = false
     
@@ -24,7 +25,6 @@ struct AddLogBeverageDetailView: View {
             VStack(alignment: .leading) {
                 selectYourDrinkVolume
                 HStack(alignment: .lastTextBaseline) {
-                    Spacer()
                     ForEach(Array(vm.volumeCaffeineAmounts)) { volumeCaffeine in
                         VStack {
                             beverageIcon
@@ -34,37 +34,42 @@ struct AddLogBeverageDetailView: View {
                                 Text("\(volumeCaffeine.volume, specifier: "%.1f") ml")
                             }
                         }
-                        .frame(height: 150,alignment: .bottom)
+                        .frame(height: 150, alignment: .bottom)
                         .padding()
-                        .onTapGesture {
-                            selectedVolume = volumeCaffeine
-                        }
+                        .onTapGesture { selectedVolume = volumeCaffeine }
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(isSelected(selectedVolume: selectedVolume, compare: volumeCaffeine) ? .blue : .white)
                         )
                     }
-                    Spacer()
-                }
+                }.frame(maxWidth: .infinity)
                 HStack {
                     DatePicker("", selection: $timeDrink, displayedComponents: .hourAndMinute)
                         .frame(width: 100)
                         .labelsHidden()
-                    Stepper("Amount: \(amount)x") { amount += 1 } onDecrement: { amount -= 1 }
-                    .font(.title2)
+                    Stepper("Amount: \(amount, specifier: specifier)x") { incrementAmount() } onDecrement: { decrementAmount() }.font(.title2)
                 }.padding(.horizontal, 30)
                 Divider()
                 HStack(spacing: 5) {
+                    waterIcon
+                    Text("\((selectedVolume?.volume ?? 0.0) * Double(amount), specifier: "%.1f") ml").font(.title3)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top)
+                HStack(spacing: 5) {
                     Spacer()
                     caffeineIcon
-                    Text("\(selectedVolume?.amount ?? 0.0, specifier: "%.2f") mg").font(.title)
+                    Text("\((selectedVolume?.amount ?? 0.0) * Double(amount), specifier: "%.2f") mg").font(.title)
                     Spacer()
-                }.padding()
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.bottom)
                 addLogButton
                 Spacer()
             }
             if vm.isLoading { LoadingView(color: .gray) }
         }
+        .frame(maxHeight: .infinity)
         .task {
             await vm.fetchVolumeCaffeine()
         }
@@ -76,7 +81,6 @@ struct AddLogBeverageDetailView: View {
             )
         }
         .navigationTitle(vm.beverage.name)
-        .frame(maxHeight: .infinity)
     }
 }
 
@@ -110,6 +114,11 @@ extension AddLogBeverageDetailView {
             .foregroundColor(.brandPrimary)
     }
     
+    private var waterIcon: some View {
+        Image(systemName: "drop.fill")
+            .foregroundColor(.cyan)
+    }
+    
     private var addLogButton: some View {
         HStack {
             Spacer()
@@ -128,6 +137,28 @@ extension AddLogBeverageDetailView {
             .background(Color.brandDarkBrown)
             .clipShape(Capsule())
             Spacer()
+        }
+    }
+    
+    private func incrementAmount() {
+        if amount == 1 {
+            amount += 0.5
+            specifier = "%.1f"
+        } else if amount == 1.5 {
+            amount += 0.5
+            specifier = "%.0f"
+        } else { amount += 1}
+    }
+    
+    private func decrementAmount() {
+        if amount == 2 {
+            amount -= 0.5
+            specifier = "%.1f"
+        } else if amount == 1.5 {
+            amount -= 0.5
+            specifier = "%.0f"
+        } else if amount == 1 { } else {
+            amount -= 1
         }
     }
     
