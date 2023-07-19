@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct CNBeveragesListView: View {    
-    
-    @State private var selectedCategory: Category = .all
-    @State private var selectedList: [CNBeverage] = [CNBeverage]()
+struct CNBeveragesListView: View {
     
     @StateObject private var vm: BeverageListViewModel = BeverageListViewModel()
     @EnvironmentObject private var beverageManager: CNBeverageManager
@@ -20,10 +17,11 @@ struct CNBeveragesListView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(Category.allCases, id: \.rawValue) { category in
-                        CategoryButtonView(category: category, selectedCategory: $selectedCategory)
+                        CategoryButtonView(category: category, selectedCategory: $vm.selectedCategory)
                             .onTapGesture {
-                                withAnimation(.easeIn(duration: 1.0)) {
-                                    vm.setSelectionList(with: category, from: beverageManager)
+                                withAnimation(.easeOut(duration: 1.0)) {
+                                    vm.selectedCategory = category
+                                    vm.setSelectionList(from: beverageManager)
                                 }
                             }
                     }
@@ -54,12 +52,12 @@ struct CNBeveragesListView: View {
                             }
                         }
                     }
-                } else if vm.selectedList.isEmpty && selectedCategory == .custom {
+                } else if vm.selectedList.isEmpty && vm.selectedCategory == .custom {
                     EmptyCustomBeverageListView()
                 } else if vm.isLoading {
                   LoadingView()
                 } else {
-                    Text("NETWORK ERROR")
+                    EmptyView().frame(maxHeight: .infinity)
                 }
             }
         }
@@ -70,16 +68,16 @@ struct CNBeveragesListView: View {
         }
         .onAppear {
             Task {
-                vm.showLoadingView()
                 if beverageManager.beverages.isEmpty {
+                    vm.showLoadingView()
                     do {
                         beverageManager.beverages = try await CloudKitManager.shared.fetchBeveragesList()
                     } catch {
                         print("Error: \(error.localizedDescription)")
                     }
+                    vm.hideLoadingView()
                 }
-                vm.setSelectionList(with: selectedCategory, from: beverageManager)
-                vm.hideLoadingView()
+                vm.setSelectionList(from: beverageManager, animation: false)
             }
         }
         .navigationTitle("Beverages")

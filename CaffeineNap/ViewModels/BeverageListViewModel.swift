@@ -5,7 +5,7 @@
 //  Created by Steven Wijaya on 11.06.2023.
 //
 
-import Foundation
+import SwiftUI
 
 final class BeverageListViewModel: ObservableObject {
     
@@ -14,10 +14,15 @@ final class BeverageListViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     
-    func setSelectionList(with: Category, from beverageManager: CNBeverageManager) {
+    func setSelectionList(from beverageManager: CNBeverageManager, animation: Bool = false) {
         DispatchQueue.main.async { [self] in
-            selectedCategory = with
-            selectedList = beverageManager.getFilteredList(of: selectedCategory)
+            if animation {
+                withAnimation(.easeInOut(duration: 1.5)) {
+                    selectedList = beverageManager.getFilteredList(of: selectedCategory)
+                }
+            } else {
+                selectedList = beverageManager.getFilteredList(of: selectedCategory)
+            }
         }
     }
     
