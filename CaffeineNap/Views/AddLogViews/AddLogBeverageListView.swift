@@ -12,8 +12,8 @@ struct AddLogBeverageListView: View {
     @Binding var showParentSheet: Bool
     @Environment(\.dismiss) var dismiss
     
-    @State private var selectedCategory: Category = .all
-    @State private var selectedList: [CNBeverage] = [CNBeverage]()
+    
+    @StateObject private var vm: AddLogBeverageListViewModel = AddLogBeverageListViewModel()
     
     @EnvironmentObject private var beverageManager: CNBeverageManager
     
@@ -24,20 +24,22 @@ struct AddLogBeverageListView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(Category.allCases, id: \.rawValue) { category in
-                                CategoryButtonView(category: category, selectedCategory: $selectedCategory)
+                                CategoryButtonView(category: category, selectedCategory: $vm.selectedCategory)
                                     .onTapGesture {
                                         withAnimation(Animation.easeOut(duration: 1.0)) {
-                                            selectedCategory = category
-//                                            selectedList = getSelectedList(selectedCategory: selectedCategory)
+                                            vm.selectedCategory = category
+                                            vm.setSelectionList(from: beverageManager)
                                         }
                                     }
                             }
                         }
                     }.padding([.horizontal, .top])
-                    if selectedCategory == .custom && selectedList.isEmpty {
+                    if vm.selectedCategory == .custom && vm.selectedList.isEmpty {
                         EmptyCustomBeverageListView()
+                    } else if vm.isLoading {
+                        LoadingView()
                     } else {
-                        List(selectedList, id: \.id) { item in
+                        List(vm.selectedList, id: \.id) { item in
                             NavigationLink {
                                 AddLogBeverageDetailView(showParentSheet: $showParentSheet, vm: AddLogBeverageViewModel(beverage: item))
                                     .toolbar {
@@ -68,7 +70,18 @@ struct AddLogBeverageListView: View {
                 }
             }
             .onAppear {
-                selectedList = beverageManager.beverages
+                Task {
+                    if beverageManager.beverages.isEmpty {
+                        vm.showLoadingView()
+                        do {
+                            beverageManager.beverages = try await CloudKitManager.shared.fetchBeveragesList()
+                        } catch {
+                            print("Error: \(error.localizedDescription)")
+                        }
+                        vm.hideLoadingView()
+                    }
+                    vm.setSelectionList(from: beverageManager, animation: false)
+                }
             }
         }
         .presentationDetents([.large, .fraction(0.8)])
@@ -116,41 +129,5 @@ struct ListRowView: View {
     
     private func getCaffeineRange() -> String {
         "\(item.minCaffeine) - \(item.maxCaffeine)"
-    }
-    
-    private func getRangeCaffeine(_ caffeineData: [VolumeCaffeineAmount]) -> String {
-        var range: String = ""
-        
-        let minCaffeine = caffeineData.min{ $0.amount < $1.amount }
-        let minCaffeineStr = String(format: "%.0f", minCaffeine!.amount)
-        let maxCaffeine = caffeineData.max{ $0.amount < $1.amount }
-        let maxCaffeineStr = String(format: "%.0f", maxCaffeine!.amount)
-        
-        if minCaffeine?.amount == maxCaffeine?.amount {
-            range = "\(minCaffeineStr)"
-        } else {
-            range = "\(minCaffeineStr) - \(maxCaffeineStr)"
-        }
-        
-        return range
-    }
-}
-
-extension AddLogBeverageListView {
-    private func getSelectedList(selectedCategory: Category) -> [CNBeverage] {
-        switch(selectedCategory) {
-        case .all:
-            return MockData.customDrinks + MockData.coffee + MockData.tea + MockData.sodaED // + MockData.medicine
-        case .custom:
-            return MockData.customDrinks
-        case .coffee:
-            return MockData.coffee
-        case .tea:
-            return MockData.tea
-        case .sodaED:
-            return MockData.sodaED
-//        case .medicine:
-//            return MockData.medicine
-        }
     }
 }
