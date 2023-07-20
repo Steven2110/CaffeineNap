@@ -13,7 +13,7 @@ struct AddLogBeverageDetailView: View {
     
     @State private var showAlert: Bool = false
     
-    @StateObject var vm: AddLogBeverageViewModel
+    @StateObject var vm: AddLogBeverageDetailViewModel
     
     var body: some View {
         ZStack {
@@ -80,7 +80,7 @@ struct AddLogBeverageDetailView: View {
 struct AddLogBeverageDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AddLogBeverageDetailView(showParentSheet: .constant(true), vm: AddLogBeverageViewModel(beverage: MockData.coffee[0]))
+            AddLogBeverageDetailView(showParentSheet: .constant(true), vm: AddLogBeverageDetailViewModel(beverage: MockData.coffee[0]))
         }
     }
 }
@@ -118,7 +118,9 @@ extension AddLogBeverageDetailView {
             Button {
                 if isValid(selectedVolume: vm.selectedVolume) {
                     Task {
+                        vm.showLoadingView()
                         await vm.addLog()
+                        vm.hideLoadingView()
                         showParentSheet = false
                     }
                 } else {

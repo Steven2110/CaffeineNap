@@ -1,5 +1,5 @@
 //
-//  AddLogBeverageViewModel.swift
+//  AddLogBeverageDetailViewModel.swift
 //  CaffeineNap
 //
 //  Created by Steven Wijaya on 20.07.2023.
@@ -7,7 +7,7 @@
 
 import CloudKit
 
-final class AddLogBeverageViewModel: ObservableObject {
+final class AddLogBeverageDetailViewModel: ObservableObject {
     
     var beverage: CNBeverage
     @Published var volumeCaffeineAmounts: [VolumeCaffeineAmount] = []
@@ -64,7 +64,6 @@ final class AddLogBeverageViewModel: ObservableObject {
     }
     
     func addLog() async {
-        showLoadingView()
         
         let logRecord: CKRecord = CKRecord(recordType: RecordType.log)
         logRecord[CNLog.kBeverageName] = beverage.name
@@ -88,9 +87,8 @@ final class AddLogBeverageViewModel: ObservableObject {
             print("Error: \(error.localizedDescription)")
         }
         
-        hideLoadingView()
     }
     
-    private func showLoadingView() { DispatchQueue.main.async { self.isLoading = true } }
-    private func hideLoadingView() { DispatchQueue.main.async { self.isLoading = false } }
+    func showLoadingView() { isLoading = true }
+    func hideLoadingView() { isLoading = false }
 }
