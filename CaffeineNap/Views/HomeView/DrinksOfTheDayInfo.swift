@@ -63,7 +63,7 @@ struct DrinksOfTheDayInfo: View {
                                             }
                                         }.frame(width: 100)
                                         Spacer()
-                                        Text("110").font(.system(size: 16))
+                                        Text("\(log.caffeineAmount, specifier: "%.0f")").font(.system(size: 14).bold())
                                         Text("mg").font(.system(size: 10))
                                         Image(systemName: "chevron.right").padding(.trailing, 5)
                                     }
