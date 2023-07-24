@@ -14,6 +14,7 @@ struct AddLogBeverageDetailView: View {
     @State private var showAlert: Bool = false
     
     @StateObject var vm: AddLogBeverageDetailViewModel
+    @EnvironmentObject var logManager: CNLogManager
     
     var body: some View {
         ZStack {
@@ -119,7 +120,7 @@ extension AddLogBeverageDetailView {
                 if isValid(selectedVolume: vm.selectedVolume) {
                     Task {
                         vm.showLoadingView()
-                        await vm.addLog()
+                        await vm.addLog(to: logManager)
                         vm.hideLoadingView()
                         showParentSheet = false
                     }

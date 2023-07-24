@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CNHomeView: View {
     
+    @EnvironmentObject var logManager: CNLogManager
     @State private var isToday: Bool = true
     
     var body: some View {
@@ -50,6 +51,18 @@ struct CNHomeView: View {
                     }
                 }
             }.accentColor(.black)
+        }
+        .onAppear {
+            Task {
+                if logManager.logs.isEmpty {
+                    do {
+                        print("FETCHING here")
+                        logManager.logs = try await CloudKitManager.shared.fetchLog()
+                    } catch {
+                        print("Error fetching log: \(error.localizedDescription)")
+                    }
+                }
+            }
         }
     }
 }

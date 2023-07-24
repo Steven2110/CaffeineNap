@@ -11,11 +11,13 @@ import SwiftUI
 struct CaffeineNapApp: App {
     @AppStorage("isDarkMode") private var isDarkMode = false
     let beverageManager: CNBeverageManager = CNBeverageManager()
+    let logManager: CNLogManager = CNLogManager()
     var body: some Scene {
         WindowGroup {
             CNTabView()
                 .preferredColorScheme(isDarkMode ? .dark : .light)
                 .environmentObject(beverageManager)
+                .environmentObject(logManager)
         }
     }
 }

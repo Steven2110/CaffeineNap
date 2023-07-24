@@ -174,4 +174,26 @@ final class CloudKitManager {
         
         return volumeCaffeineAmounts
     }
+    
+    func fetchLog() async throws -> [CNLog] {
+        
+        var logs: [CNLog] = []
+        // Initialize sorting
+        let sortVolume = NSSortDescriptor(key: CNLog.kDrinkTime, ascending: false)
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.log, predicate: NSPredicate(value: true))
+        query.sortDescriptors = [sortVolume]
+        
+        // To get from which database container we should query our request
+        
+        let result = try await container.privateCloudDatabase.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        for record in records {
+            let log = CNLog(record: record)
+            logs.append(log)
+        }
+        
+        return logs
+    }
 }

@@ -12,6 +12,7 @@ struct CNTabView: View {
     @State private var selectedItem = 1
     @State private var previousSelectedItem = 1
     @EnvironmentObject private var beverageManager: CNBeverageManager
+    @EnvironmentObject private var logManager: CNLogManager
     
     @State private var isPresentingAddSheet = false
     

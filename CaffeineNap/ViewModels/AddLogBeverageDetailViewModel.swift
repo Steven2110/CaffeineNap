@@ -63,11 +63,13 @@ final class AddLogBeverageDetailViewModel: ObservableObject {
         }
     }
     
-    func addLog() async {
+    func addLog(to logManager: CNLogManager) async {
         
         let logRecord: CKRecord = CKRecord(recordType: RecordType.log)
         logRecord[CNLog.kBeverageName] = beverage.name
+        logRecord[CNLog.kBeverageIcon] = beverage.icon
         logRecord[CNLog.kBeverageAmount] = amount
+        logRecord[CNLog.kBeverageSize] = selectedVolume!.type.rawValue
         logRecord[CNLog.kCaffeineAmount] = selectedVolume!.amount * Double(amount)
         logRecord[CNLog.kVolume] = selectedVolume!.volume * Double(amount)
         logRecord[CNLog.kDrinkTime] = timeDrink
@@ -83,6 +85,7 @@ final class AddLogBeverageDetailViewModel: ObservableObject {
         do {
             let record = try await CloudKitManager.shared.save(record: logRecord)
             print("Record saved: \(record)")
+            logManager.addLog(record: record)
         } catch {
             print("Error: \(error.localizedDescription)")
         }
