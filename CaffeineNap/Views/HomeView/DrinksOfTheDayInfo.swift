@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct DrinksOfTheDayInfo: View {
+    
+    @EnvironmentObject var logManager: CNLogManager
+    @State private var isLoading: Bool = false
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25).foregroundColor(.brandSecondary.opacity(0.5))
@@ -15,51 +19,76 @@ struct DrinksOfTheDayInfo: View {
                 Text("Drinks of the Day")
                     .font(.system(size: 14, weight: .bold))
                     .underline()
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 ScrollView {
-                    ForEach(0..<10, id: \.self) { _ in
-                        NavigationLink {
-                            Text("Drink's information")
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(.brandSecondary)
-                                HStack(spacing: 5) {
-                                    coffeeCupIcon
-                                    VStack(alignment: .leading, spacing: 1) {
-                                        Text("Iced Macchiatto")
-                                            .font(.system(size: 16))
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.7)
-                                        HStack(alignment: .bottom, spacing: 5) {
-                                            ZStack {
-                                                RoundedRectangle(cornerRadius: 2)
-                                                    .frame(width: 50, height: 20)
-                                                    .foregroundColor(.baseGray)
-                                                Text("Medium")
-                                                    .font(.system(size: 12))
-                                                    .foregroundColor(.brandDarkBrown)
-                                            }
-                                            ZStack {
-                                                RoundedRectangle(cornerRadius: 2)
-                                                    .frame(width: 50, height: 20)
-                                                    .foregroundColor(.baseGray)
-                                                Text("07:44")
-                                                    .font(.system(size: 12))
-                                                    .foregroundColor(.brandDarkBrown)
-                                            }
-                                        }
-                                    }.frame(width: 100)
-                                    Spacer()
-                                    Text("110").font(.system(size: 16))
-                                    Text("mg").font(.system(size: 10))
-                                    Image(systemName: "chevron.right").padding(.trailing, 5)
+                    if !logManager.logs.isEmpty && !isLoading {
+                        ForEach(logManager.logs) { log in
+                            NavigationLink {
+                                VStack {
+                                    Text(log.beverageName)
+                                    Text(log.drinkTime, style: .date)
+                                    Text(log.drinkTime, style: .time)
                                 }
-                            }.frame(width: 215, height: 45)
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .foregroundColor(.brandSecondary)
+                                    HStack(spacing: 5) {
+                                        Image(log.beverageIcon)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 25, height: 36)
+                                        VStack(alignment: .leading, spacing: 1) {
+                                            Text(log.beverageName)
+                                                .font(.system(size: 16))
+                                                .lineLimit(1)
+                                                .minimumScaleFactor(0.7)
+                                            HStack(alignment: .bottom, spacing: 5) {
+                                                ZStack {
+                                                    RoundedRectangle(cornerRadius: 2)
+                                                        .frame(width: 55, height: 20)
+                                                        .foregroundColor(.baseGray)
+                                                    Text(log.beverageSize.rawValue.capitalized)
+                                                        .font(.system(size: 12))
+                                                        .foregroundColor(.brandDarkBrown)
+                                                }
+                                                ZStack {
+                                                    RoundedRectangle(cornerRadius: 2)
+                                                        .frame(width: 50, height: 20)
+                                                        .foregroundColor(.baseGray)
+                                                    Text(log.drinkTime, style: .time)
+                                                        .font(.system(size: 12))
+                                                        .foregroundColor(.brandDarkBrown)
+                                                }
+                                            }
+                                        }.frame(width: 100)
+                                        Spacer()
+                                        Text("110").font(.system(size: 16))
+                                        Text("mg").font(.system(size: 10))
+                                        Image(systemName: "chevron.right").padding(.trailing, 5)
+                                    }
+                                }.frame(width: 215, height: 45)
+                            }
                         }
-                    }
+                    } else if isLoading { LoadingView().frame(maxWidth: .infinity, maxHeight: .infinity) }
                 }.frame(height: 270)
+            }.padding()
+        }
+        .frame(width: 240, height: 327)
+        .onAppear {
+            print("Appear")
+            Task {
+                do {
+                    isLoading = true
+                    logManager.logs = try await CloudKitManager.shared.fetchLog()
+                    print(logManager.logs)
+                    isLoading = false
+                } catch {
+                    print("Error log: \(error.localizedDescription)")
+                    isLoading = false
+                }
             }
-        }.frame(width: 240, height: 327)
+        }
     }
 }
 
