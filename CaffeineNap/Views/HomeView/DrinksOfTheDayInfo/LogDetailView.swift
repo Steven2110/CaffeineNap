@@ -62,6 +62,7 @@ struct LogDetailView: View {
             Section {
                 Button(role: .destructive) {
                     Task {
+                        // - TODO: Add alert if something went wrong
                         await vm.deleteLog()
                         dismiss()
                     }
@@ -77,6 +78,7 @@ struct LogDetailView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     Task {
+                        // - TODO: Add alert if something went wrong
                         await vm.updateLog()
                         dismiss()
                     }

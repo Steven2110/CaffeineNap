@@ -76,6 +76,7 @@ struct AddLogBeverageListView: View {
                         do {
                             beverageManager.beverages = try await CloudKitManager.shared.fetchBeveragesList()
                         } catch {
+                            // - TODO: Add alert if something went wrong
                             print("Error: \(error.localizedDescription)")
                         }
                         vm.hideLoadingView()

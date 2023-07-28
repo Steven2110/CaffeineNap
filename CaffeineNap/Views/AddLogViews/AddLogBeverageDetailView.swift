@@ -119,6 +119,7 @@ extension AddLogBeverageDetailView {
             Button {
                 if isValid(selectedVolume: vm.selectedVolume) {
                     Task {
+                        // - TODO: Add alert if something went wrong in saving
                         vm.showLoadingView()
                         await vm.addLog(to: logManager)
                         vm.hideLoadingView()

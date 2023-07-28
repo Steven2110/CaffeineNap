@@ -62,7 +62,9 @@ struct DrinksOfTheDayInfo: View {
                             }
                         }
                     }.frame(height: 270)
-                } else if isLoading { LoadingView(withColor: false).frame(maxWidth: .infinity, maxHeight: .infinity) }
+                } else if isLoading {
+                    LoadingView(withColor: false).frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             }.padding()
         }
         .frame(width: 240, height: 327)
@@ -75,6 +77,7 @@ struct DrinksOfTheDayInfo: View {
                     print(logManager.logs)
                     isLoading = false
                 } catch {
+                    // - TODO: Add alert if something went wrong
                     print("Error log: \(error.localizedDescription)")
                     isLoading = false
                 }
