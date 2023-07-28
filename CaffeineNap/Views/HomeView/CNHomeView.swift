@@ -34,6 +34,13 @@ struct CNHomeView: View {
                             Image(systemName: "chevron.left")
                         }
                         Text(getFullDate())
+                            .gesture(TapGesture(count: 2).onEnded {
+                                logManager.date = Date()
+                            })
+                            .simultaneousGesture(TapGesture().onEnded {
+                                // - TODO: Show calendar when tapped once
+                                print("Tapped")
+                            })
                         Button {
                             logManager.nextDay()
                         } label: {
@@ -42,6 +49,7 @@ struct CNHomeView: View {
                         }.disabled(isToday())
                     }
                 }
+                // - MARK: Remove this toolbar item, if single tap are implemented
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         //
