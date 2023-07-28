@@ -30,6 +30,9 @@
 		B06D4BA42A69042200980FCA /* CNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4BA32A69042200980FCA /* CNLogManager.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
+		B0AA9A2D2A6E96400044313F /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A2C2A6E96400044313F /* LogDetailView.swift */; };
+		B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */; };
+		B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD729B5ED5200C3BC07 /* .gitignore */; };
@@ -86,6 +89,9 @@
 		B06D4BA32A69042200980FCA /* CNLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLogManager.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		B0AA9A2C2A6E96400044313F /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewModel.swift; sourceTree = "<group>"; };
+		B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOfTheDayInfoBox.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,6 +193,16 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B0AA9A2B2A6E96230044313F /* DrinksOfTheDayInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
+				B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */,
+				B0AA9A2C2A6E96400044313F /* LogDetailView.swift */,
+			);
+			path = DrinksOfTheDayInfo;
+			sourceTree = "<group>";
+		};
 		B0C64DBC29B5ED0700C3BC07 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +267,7 @@
 				B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */,
 				B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */,
 				B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */,
+				B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -288,7 +305,7 @@
 				B0C64DE829B6F1CB00C3BC07 /* CaffeineLevelInfo.swift */,
 				B0C64DEA29B6FDAD00C3BC07 /* HeartRateInfo.swift */,
 				B0C64DEC29B6FE4A00C3BC07 /* BloodOxygenInfo.swift */,
-				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
+				B0AA9A2B2A6E96230044313F /* DrinksOfTheDayInfo */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -409,9 +426,11 @@
 				B06D4B9E2A685BE900980FCA /* AddLogBeverageDetailViewModel.swift in Sources */,
 				B0DDF64B2A56BA870097E5B6 /* CNCustomBeverageAddView.swift in Sources */,
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
+				B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */,
+				B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */,
 				B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */,
@@ -435,6 +454,7 @@
 				B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */,
 				B04DB4EF29BB4BAF0076058B /* AddLogBeverageListView.swift in Sources */,
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
+				B0AA9A2D2A6E96400044313F /* LogDetailView.swift in Sources */,
 				B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */,
 				B04DB4F129BB4E980076058B /* AddLogBeverageDetailView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,

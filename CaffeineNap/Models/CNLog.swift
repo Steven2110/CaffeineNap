@@ -19,14 +19,14 @@ struct CNLog: Identifiable {
     static let kBeverage = "beverage"
     
     let id: CKRecord.ID
-    let beverageIcon: String
-    let beverageName: String
-    let beverageAmount: Double
-    let beverageSize: VolumeType
-    let caffeineAmount: Double
-    let volume: Double
-    let drinkTime: Date
-    let beverage: CKRecord.Reference?
+    var beverageIcon: String
+    var beverageName: String
+    var beverageAmount: Double
+    var beverageSize: VolumeType
+    var caffeineAmount: Double
+    var volume: Double
+    var drinkTime: Date
+    var beverage: CKRecord.Reference?
     
     init(beverageIcon: String, beverageName: String, beverageAmount: Double, beverageSize: VolumeType, caffeineAmount: Double, volume: Double, drinkTime: Date) {
         self.id = CKRecord.ID(recordName: beverageName)

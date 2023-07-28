@@ -24,11 +24,7 @@ struct DrinksOfTheDayInfo: View {
                     if !logManager.logs.isEmpty && !isLoading {
                         ForEach(logManager.logs) { log in
                             NavigationLink {
-                                VStack {
-                                    Text(log.beverageName)
-                                    Text(log.drinkTime, style: .date)
-                                    Text(log.drinkTime, style: .time)
-                                }
+                                LogDetailView(vm: LogDetailViewModel(log: log))
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 5)
@@ -62,9 +58,12 @@ struct DrinksOfTheDayInfo: View {
                                                 }
                                             }
                                         }.frame(width: 100)
-                                        Spacer()
-                                        Text("\(log.caffeineAmount, specifier: "%.0f")").font(.system(size: 14).bold())
-                                        Text("mg").font(.system(size: 10))
+                                        Text("\(log.caffeineAmount, specifier: "%.0f")")
+                                            .frame(maxWidth: .infinity, alignment: .trailing)
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.6)
+                                            .bold()
+                                        Text("mg").font(.caption2)
                                         Image(systemName: "chevron.right").padding(.trailing, 5)
                                     }
                                 }.frame(width: 215, height: 45)
@@ -105,6 +104,4 @@ extension DrinksOfTheDayInfo {
             .scaledToFit()
             .frame(width: 25, height: 36)
     }
-    
-    
 }

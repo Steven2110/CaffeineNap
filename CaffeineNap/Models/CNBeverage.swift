@@ -94,8 +94,29 @@ struct CNBeverage: Identifiable {
     }
 }
 
-enum VolumeType: String, Codable, CaseIterable {
+enum VolumeType: String, CaseIterable, CustomStringConvertible, Identifiable {
     case single, double, triple, small, medium, large, unknown
+    
+    var id: Self { self }
+    
+    var description: String {
+        switch self {
+        case .single:
+            return "Single"
+        case .double:
+            return "Double"
+        case .triple:
+            return "Triple"
+        case .small:
+            return "Small"
+        case .medium:
+            return "Medium"
+        case .large:
+            return "Large"
+        case .unknown:
+            return "Unknown"
+        }
+    }
     
     static func from(_ str: String) -> VolumeType {
         if str == "single" {
@@ -130,11 +151,11 @@ struct VolumeCaffeineAmount: Identifiable {
     var beverage: CKRecord.Reference
                         
     init(type: VolumeType, volume: Double, amount: Double) {
-        self.id = CKRecord.ID(recordName: type.rawValue)
+        self.id = CKRecord.ID(recordName: String(describing: type))
         self.type = type
         self.volume = volume
         self.amount = amount
-        beverage = CKRecord.Reference(recordID: CKRecord.ID(recordName: type.rawValue), action: .deleteSelf)
+        beverage = CKRecord.Reference(recordID: CKRecord.ID(recordName: String(describing: type)), action: .deleteSelf)
     }
     
     init(record: CKRecord) {
