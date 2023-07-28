@@ -20,8 +20,8 @@ struct DrinksOfTheDayInfo: View {
                     .font(.system(size: 14, weight: .bold))
                     .underline()
                     .frame(maxWidth: .infinity, alignment: .leading)
-                ScrollView {
-                    if !logManager.logs.isEmpty && !isLoading {
+                if !logManager.logs.isEmpty && !isLoading {
+                    ScrollView {
                         ForEach(logManager.logs) { log in
                             NavigationLink {
                                 LogDetailView(vm: LogDetailViewModel(log: log))
@@ -40,21 +40,13 @@ struct DrinksOfTheDayInfo: View {
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.7)
                                             HStack(alignment: .bottom, spacing: 5) {
-                                                ZStack {
-                                                    RoundedRectangle(cornerRadius: 2)
-                                                        .frame(width: 55, height: 20)
-                                                        .foregroundColor(.baseGray)
-                                                    Text(log.beverageSize.rawValue.capitalized)
-                                                        .font(.system(size: 12))
-                                                        .foregroundColor(.brandDarkBrown)
+                                                DrinkOfTheDayInfoBox {
+                                                    Text(String(describing: log.beverageSize))
+                                                        .drinkOfTheDayInfoStyle()
                                                 }
-                                                ZStack {
-                                                    RoundedRectangle(cornerRadius: 2)
-                                                        .frame(width: 50, height: 20)
-                                                        .foregroundColor(.baseGray)
+                                                DrinkOfTheDayInfoBox {
                                                     Text(log.drinkTime, style: .time)
-                                                        .font(.system(size: 12))
-                                                        .foregroundColor(.brandDarkBrown)
+                                                        .drinkOfTheDayInfoStyle()
                                                 }
                                             }
                                         }.frame(width: 100)
@@ -69,8 +61,8 @@ struct DrinksOfTheDayInfo: View {
                                 }.frame(width: 215, height: 45)
                             }
                         }
-                    } else if isLoading { LoadingView().frame(maxWidth: .infinity, maxHeight: .infinity) }
-                }.frame(height: 270)
+                    }.frame(height: 270)
+                } else if isLoading { LoadingView(withColor: false).frame(maxWidth: .infinity, maxHeight: .infinity) }
             }.padding()
         }
         .frame(width: 240, height: 327)

@@ -27,3 +27,11 @@ struct UsernameText: ViewModifier {
             .minimumScaleFactor(0.75)
     }
 }
+
+struct DrinkOfTheDayInfoText: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 12))
+            .foregroundColor(.brandDarkBrown)
+    }
+}

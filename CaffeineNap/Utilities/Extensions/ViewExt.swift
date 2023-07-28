@@ -16,6 +16,10 @@ extension View {
         self.modifier(UsernameText())
     }
     
+    func drinkOfTheDayInfoStyle() -> some View {
+        self.modifier(DrinkOfTheDayInfoText())
+    }
+    
     func dismissKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
