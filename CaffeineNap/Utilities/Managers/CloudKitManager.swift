@@ -175,13 +175,17 @@ final class CloudKitManager {
         return volumeCaffeineAmounts
     }
     
-    func fetchLog() async throws -> [CNLog] {
+    func fetchLog(for date: Date) async throws -> [CNLog] {
         
         var logs: [CNLog] = []
         // Initialize sorting
         let sortVolume = NSSortDescriptor(key: CNLog.kDrinkTime, ascending: false)
+        // Add predicate for fetching specific date record (drink time)
+        let tomorrowDate = Calendar.current.date(byAdding: .day, value: 1, to: date)!
+        let tomorrow = Calendar.current.startOfDay(for: tomorrowDate)
+        let predicate = NSPredicate(format: "drinkTime >= %@ && drinkTime <= %@", date as CVarArg, tomorrow as CVarArg)
         // Initialize query
-        let query = CKQuery(recordType: RecordType.log, predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: RecordType.log, predicate: predicate)
         query.sortDescriptors = [sortVolume]
         
         // To get from which database container we should query our request

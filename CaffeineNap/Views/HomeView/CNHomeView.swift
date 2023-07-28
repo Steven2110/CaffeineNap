@@ -10,7 +10,6 @@ import SwiftUI
 struct CNHomeView: View {
     
     @EnvironmentObject var logManager: CNLogManager
-    @State private var isToday: Bool = true
     
     var body: some View {
         NavigationView {
@@ -30,17 +29,17 @@ struct CNHomeView: View {
                 ToolbarItem(placement: .principal) {
                     HStack {
                         Button {
-                            
+                            logManager.previousDay()
                         } label: {
                             Image(systemName: "chevron.left")
                         }
-                        Text("Today, 12 February 2023")
+                        Text(getFullDate())
                         Button {
-                            
+                            logManager.nextDay()
                         } label: {
                             Image(systemName: "chevron.right")
-                                .opacity(isToday ? 0 : 1)
-                        }.disabled(isToday)
+                                .opacity(isToday() ? 0 : 1)
+                        }.disabled(isToday())
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -56,8 +55,7 @@ struct CNHomeView: View {
             Task {
                 if logManager.logs.isEmpty {
                     do {
-                        print("FETCHING here")
-                        logManager.logs = try await CloudKitManager.shared.fetchLog()
+                        logManager.logs = try await CloudKitManager.shared.fetchLog(for: logManager.getCurrentDateStart())
                     } catch {
                         print("Error fetching log: \(error.localizedDescription)")
                     }
@@ -70,5 +68,44 @@ struct CNHomeView: View {
 struct CNHomeView_Previews: PreviewProvider {
     static var previews: some View {
         CNHomeView()
+            .environmentObject(CNLogManager())
+    }
+}
+
+extension CNHomeView {
+    private func isToday() -> Bool {
+        let calendar = Calendar.current
+        
+        return calendar.isDateInToday(logManager.date)
+    }
+    
+    private func getDay() -> String {
+        let calendar = Calendar.current
+        
+        if calendar.isDateInToday(logManager.date) {
+            return "Today"
+        } else if calendar.isDateInYesterday(logManager.date) {
+            return "Yesterday"
+        } else if calendar.isDateInTomorrow(logManager.date) {
+            return "Tomorrow"
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let dayOfTheWeekString = dateFormatter.string(from: logManager.date)
+        
+        return dayOfTheWeekString
+    }
+    
+    private func getDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        let dateString = dateFormatter.string(from: logManager.date)
+        
+        return dateString
+    }
+    
+    private func getFullDate() -> String {
+        "\(getDay()), \(getDate())"
     }
 }

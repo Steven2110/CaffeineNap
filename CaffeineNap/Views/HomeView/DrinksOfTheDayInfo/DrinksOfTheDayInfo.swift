@@ -64,21 +64,32 @@ struct DrinksOfTheDayInfo: View {
                     }.frame(height: 270)
                 } else if isLoading {
                     LoadingView(withColor: false).frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
+                } else { Spacer() }
             }.padding()
         }
         .frame(width: 240, height: 327)
         .onAppear {
-            print("Appear")
             Task {
                 do {
                     isLoading = true
-                    logManager.logs = try await CloudKitManager.shared.fetchLog()
-                    print(logManager.logs)
+                    logManager.logs = try await CloudKitManager.shared.fetchLog(for: logManager.getCurrentDateStart())
                     isLoading = false
                 } catch {
                     // - TODO: Add alert if something went wrong
                     print("Error log: \(error.localizedDescription)")
+                    isLoading = false
+                }
+            }
+        }
+        .onChange(of: logManager.date) { _ in
+            Task {
+                do {
+                    isLoading = true
+                    logManager.logs = try await CloudKitManager.shared.fetchLog(for: logManager.getCurrentDateStart())
+                    isLoading = false
+                } catch {
+                    // - TODO: Add alert if something went wrong
+                    print("Error fetching log: \(error.localizedDescription)")
                     isLoading = false
                 }
             }
