@@ -23,4 +23,8 @@ extension View {
     func dismissKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+    
+    func animatingOverlay(alignment: Alignment = .center, for number: Double, specifier: String = "%.0f", color: Color? = nil, smallFont: Bool = false, measurementUnit: String = "") -> some View {
+        self.modifier(AnimatableNumberModifier(alignment: alignment, number: number, specifier: specifier, color: color, smallFont: smallFont, measurementUnit: measurementUnit))
+    }
 }

@@ -7,7 +7,7 @@
 
 import CloudKit
 
-struct CNLog: Identifiable {
+struct CNLog: Identifiable, Equatable {
     
     static let kBeverageIcon = "beverageIcon"
     static let kBeverageName = "beverageName"
