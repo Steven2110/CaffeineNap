@@ -25,3 +25,7 @@ func getImageSize(for size: VolumeType) -> Double {
         return 30.0
     }
 }
+
+func predictNext30MinutesCaffeineLevel(currentCaffeineLevel: Double) -> Double {
+    return currentCaffeineLevel * (1 - 0.5 * (30.0 / 240.0))
+}

@@ -36,6 +36,7 @@
 		B0AA9A352A78F87E0044313F /* MainInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A342A78F87E0044313F /* MainInfoViewModel.swift */; };
 		B0AA9A372A78FC0C0044313F /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */; };
 		B0AA9A392A7910ED0044313F /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A382A7910ED0044313F /* DateExt.swift */; };
+		B0AA9A3B2A7B648A0044313F /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A3A2A7B648A0044313F /* ChartData.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
 		B0C64DCD29B5ED0800C3BC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */; };
 		B0C64DD829B5ED5200C3BC07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B0C64DD729B5ED5200C3BC07 /* .gitignore */; };
@@ -98,6 +99,7 @@
 		B0AA9A342A78F87E0044313F /* MainInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoViewModel.swift; sourceTree = "<group>"; };
 		B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		B0AA9A382A7910ED0044313F /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
+		B0AA9A3A2A7B648A0044313F /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineNapApp.swift; sourceTree = "<group>"; };
 		B0C64DCC29B5ED0800C3BC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		B0C64DDD29B5F7D900C3BC07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0AA9A3A2A7B648A0044313F /* ChartData.swift */,
 				B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */,
 				B06D4B9F2A685D5B00980FCA /* CNLog.swift */,
 				B04CABF029F3E90800238E68 /* CNProfile.swift */,
@@ -459,6 +462,7 @@
 				B0C64DF629B88B3D00C3BC07 /* CNBeverage.swift in Sources */,
 				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
 				B06D4BA42A69042200980FCA /* CNLogManager.swift in Sources */,
+				B0AA9A3B2A7B648A0044313F /* ChartData.swift in Sources */,
 				B0FDE8832A5EE9090061F620 /* CustomBeverageViewModel.swift in Sources */,
 				B06D4BA22A68FD0400980FCA /* AddLogBeverageListViewModel.swift in Sources */,
 				B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */,
