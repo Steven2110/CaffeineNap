@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B017A30D2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A30C2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift */; };
+		B017A30F2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */; };
 		B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */; };
 		B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725C2A3879C7004E2C99 /* CKRecordExt.swift */; };
 		B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		B017A30C2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
+		B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfoRow.swift; sourceTree = "<group>"; };
 		B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageListViewModel.swift; sourceTree = "<group>"; };
 		B045725C2A3879C7004E2C99 /* CKRecordExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExt.swift; sourceTree = "<group>"; };
 		B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageDetailView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C64DEE29B717C700C3BC07 /* DrinksOfTheDayInfo.swift */,
+				B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */,
 				B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */,
 				B017A30C2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift */,
 				B0AA9A2C2A6E96400044313F /* LogDetailView.swift */,
@@ -485,6 +488,7 @@
 				B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */,
+				B017A30F2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
 				B0C64DFA29B9BF8500C3BC07 /* ProfileView.swift in Sources */,

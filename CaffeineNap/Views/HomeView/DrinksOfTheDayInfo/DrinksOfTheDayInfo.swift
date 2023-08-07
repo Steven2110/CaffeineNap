@@ -15,59 +15,18 @@ struct DrinksOfTheDayInfo: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Drinks of the Day")
-                .font(.system(size: 14, weight: .bold))
+                .font(.title2.bold())
                 .underline()
                 .frame(maxWidth: .infinity, alignment: .leading)
             if !logManager.logs.isEmpty && !isLoading {
                 ScrollView {
                     ForEach(logManager.logs) { log in
-                        NavigationLink {
-                            LogDetailView(vm: LogDetailViewModel(log: log))
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(.brandSecondary)
-                                HStack(spacing: 5) {
-                                    Image(log.beverageIcon)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 30, height: 30)
-                                        .padding(.horizontal, 5)
-                                    VStack(alignment: .leading, spacing: 1) {
-                                        Text(log.beverageName)
-                                            .font(.system(size: 16))
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.7)
-                                        HStack(alignment: .bottom, spacing: 10) {
-                                            DrinkOfTheDayInfoBox {
-                                                Text(String(describing: log.beverageSize))
-                                                    .drinkOfTheDayInfoStyle()
-                                            }
-                                            DrinkOfTheDayInfoBox {
-                                                Text(log.drinkTime, style: .time)
-                                                    .drinkOfTheDayInfoStyle()
-                                            }
-                                        }
-                                    }.frame(width: 175, alignment: .leading)
-                                        .border(.red)
-                                    Text("\(log.caffeineAmount, specifier: "%.0f")")
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.6)
-                                        .bold()
-                                        .border(.red)
-                                    Text("mg").font(.caption2)
-                                    Image(systemName: "chevron.right").padding(.trailing, 5)
-                                }
-                            }
-                            .frame(height: 50)
-                            .frame(maxWidth: .infinity)
-                        }
+                        DrinksOfTheDayInfoRow(log: log)
                     }
                 }.frame(height: 270)
             } else if isLoading {
                 LoadingView(withColor: false).frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else { Spacer() }
+            } else { EmptyDrinksOfTheDayInfo().frame(maxWidth: .infinity, maxHeight: .infinity) }
         }
         .padding()
         .frame(width: UIScreen.main.bounds.width - 20, height: 350)
