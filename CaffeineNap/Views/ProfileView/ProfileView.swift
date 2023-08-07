@@ -28,9 +28,10 @@ struct ProfileView: View {
                             VStack {
                                 HStack(alignment: .lastTextBaseline) {
                                     TextField("Username", text: $vm.username).usernameStyle()
-                                    ForEach(0..<3, id: \.self) { _ in
-                                        badge
-                                    }
+                                    // - MARK: Later add badge for achievements
+//                                    ForEach(0..<3, id: \.self) { _ in
+//                                        badge
+//                                    }
                                     Spacer()
                                 }
                                 TextField("First Name", text: $vm.firstName).profileNameStyle()
@@ -149,7 +150,7 @@ extension ProfileView {
     
     private var profilePicture: some View {
         ZStack {
-            AvatarView(image: vm.avatar, size: 100)
+            AvatarView(image: vm.avatar, size: UIScreen.main.bounds.width * 0.25 - 10)
             editProfilePicture
         }
     }
