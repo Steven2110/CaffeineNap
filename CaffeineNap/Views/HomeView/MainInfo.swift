@@ -36,7 +36,7 @@ struct MainInfo: View {
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
                 VStack(alignment: .leading, spacing: 10){
-                    HStack(spacing: 9) {
+                    HStack(alignment: .firstTextBaseline, spacing: 9) {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Today Total").font(.system(size: 14, weight: .semibold))
                             Color.clear
@@ -50,7 +50,7 @@ struct MainInfo: View {
                                 .animatingOverlay(alignment: .leading, for: vm.beverageCupAmount, specifier: vm.cupAmountSpecifier,smallFont: true, measurementUnit: vm.beverageAmountMeasurementUnit)
                         }
                     }
-                    HStack(spacing: 24) {
+                    HStack(alignment: .firstTextBaseline, spacing: 24) {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Alertness").font(.system(size: 14, weight: .semibold))
                             Text(String(describing: vm.alertness)).font(.system(size: 14))
