@@ -160,8 +160,10 @@ extension CaffeineLevelInfo {
         for log in logManager.logs.sorted(by: {$0.drinkTime < $1.drinkTime }) {
             let currentDrinkTime = log.drinkTime
             
-            for i in 0..<caffeineLevelOvertime.count - 1 {
-                if (currentDrinkTime >= caffeineLevelOvertime[i].time && currentDrinkTime < caffeineLevelOvertime[i + 1].time) {
+            for i in 0..<caffeineLevelOvertime.count {
+                if i == caffeineLevelOvertime.count - 1 && currentDrinkTime >= caffeineLevelOvertime[i].time {
+                    caffeineLevelOvertime[i].caffeineAmount += log.caffeineAmount
+                } else if (currentDrinkTime >= caffeineLevelOvertime[i].time && currentDrinkTime < caffeineLevelOvertime[i + 1].time) {
                     caffeineLevelOvertime[i].caffeineAmount += log.caffeineAmount
                     print(log.caffeineAmount)
                 }
