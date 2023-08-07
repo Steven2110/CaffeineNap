@@ -24,84 +24,84 @@ struct CaffeineLevelInfo: View {
     @State private var plotWidth: CGFloat = 0
     
     var body: some View {
-        ZStack {
-            base
-            VStack(alignment: .leading) {
-                Text("Caffeine Level Overtime").font(.system(size: 14, weight: .bold))
-                HStack(alignment: .bottom) {
-                    ScrollView(.horizontal) {
-                        Chart {
-                            ForEach(caffeineLevelOvertime) { data in
-                                BarMark(
-                                    x: .value("Time", data.time),
-                                    y: .value("Caffeine Amount", data.caffeineAmount),
-                                    width: 10
-                                )
-                                .foregroundStyle(Color.brandDarkBrown)
-                                .clipShape(Capsule())
-                                RuleMark(y: .value("Sleep", 100.0))
-                                    .lineStyle(.init(lineWidth: 1, miterLimit: 2, dash: [2], dashPhase: 5))
-                                    .foregroundStyle(Color.brandPrimary)
-                                    .annotation(alignment: .leading) { sleepIndicator.offset(x: -20, y: -5) }
-                                    .annotation(alignment: .trailing) { sleepIndicator.offset(x: 20, y: -5) }
-                                if let selectedItem, selectedItem.id == data.id {
-                                    RuleMark(x: .value("Hour", selectedItem.time))
-                                        .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
-                                        .offset(x: (plotWidth / CGFloat(size)) / 2)
-                                        .annotation(position: .leading) {
-                                            VStack(alignment: .leading) {
-                                                Text("Caffeine").bold()
-                                                Text("\(getTime(from: selectedItem.time))")
-                                                Text("\(selectedItem.caffeineAmount, specifier: "%.1f") mg")
-                                            }
-                                            .padding()
-                                            .background {
-                                                RoundedRectangle(cornerRadius: 6, style: .continuous)
-                                                    .fill(Color.brandSecondary.shadow(.drop(radius: 2)))
-                                            }
-                                            .offset(y: -10)
+        VStack(alignment: .leading) {
+            Text("Caffeine Level Overtime").font(.system(size: 14, weight: .bold))
+            HStack(alignment: .bottom) {
+                ScrollView(.horizontal) {
+                    Chart {
+                        ForEach(caffeineLevelOvertime) { data in
+                            BarMark(
+                                x: .value("Time", data.time),
+                                y: .value("Caffeine Amount", data.caffeineAmount),
+                                width: 10
+                            )
+                            .foregroundStyle(Color.brandDarkBrown)
+                            .clipShape(Capsule())
+                            RuleMark(y: .value("Sleep", 100.0))
+                                .lineStyle(.init(lineWidth: 1, miterLimit: 2, dash: [2], dashPhase: 5))
+                                .foregroundStyle(Color.brandPrimary)
+                                .annotation(alignment: .leading) { sleepIndicator.offset(x: -20, y: -5) }
+                                .annotation(alignment: .trailing) { sleepIndicator.offset(x: 20, y: -5) }
+                            if let selectedItem, selectedItem.id == data.id {
+                                RuleMark(x: .value("Hour", selectedItem.time))
+                                    .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
+                                    .offset(x: (plotWidth / CGFloat(size)) / 2)
+                                    .annotation(position: .leading) {
+                                        VStack(alignment: .leading) {
+                                            Text("Caffeine").bold()
+                                            Text("\(getTime(from: selectedItem.time))")
+                                            Text("\(selectedItem.caffeineAmount, specifier: "%.1f") mg")
                                         }
-                                }
-                            }
-                        }
-                        .frame(width: 15 * CGFloat(size), height: 150)
-                        .chartYAxis {
-                            AxisMarks(position: .leading)
-                            AxisMarks(position: .trailing)
-                        }
-                        .chartOverlay { proxy in
-                            GeometryReader { innerPrxoy in
-                                Rectangle()
-                                    .fill(.clear)
-                                    .contentShape(Rectangle())
-                                    .simultaneousGesture(
-                                        DragGesture(minimumDistance: 2)
-                                            .onChanged { value in
-                                                let location = value.location
-                                                if let date: Date = proxy.value(atX: location.x), let amount: Double = proxy.value(atY: location.y) {
-                                                    let calendar = Calendar.current
-                                                    let hour = calendar.component(.hour, from: date)
-                                                    let minute = calendar.component(.minute, from: date)
-                                                    
-                                                    if let currentItem = caffeineLevelOvertime.first(where: { data in
-                                                        calendar.component(.hour, from: data.time) == hour && calendar.component(.minute, from: data.time) == minute && amount <= data.caffeineAmount
-                                                    }) {
-                                                        self.selectedItem = currentItem
-                                                        self.plotWidth = proxy.plotAreaSize.width
-                                                    }
-                                                }
-                                            }
-                                            .onEnded { _ in
-                                                self.selectedItem = nil
-                                            },
-                                        including: .all
-                                    )
+                                        .padding()
+                                        .background {
+                                            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                                .fill(Color.brandSecondary.shadow(.drop(radius: 2)))
+                                        }
+                                        .offset(y: -10)
+                                    }
                             }
                         }
                     }
+                    .frame(width: 15 * CGFloat(size), height: 150)
+                    .chartYAxis {
+                        AxisMarks(position: .leading)
+                        AxisMarks(position: .trailing)
+                    }
+                    .chartOverlay { proxy in
+                        GeometryReader { innerPrxoy in
+                            Rectangle()
+                                .fill(.clear)
+                                .contentShape(Rectangle())
+                                .simultaneousGesture(
+                                    DragGesture(minimumDistance: 2)
+                                        .onChanged { value in
+                                            let location = value.location
+                                            if let date: Date = proxy.value(atX: location.x), let amount: Double = proxy.value(atY: location.y) {
+                                                let calendar = Calendar.current
+                                                let hour = calendar.component(.hour, from: date)
+                                                let minute = calendar.component(.minute, from: date)
+                                                
+                                                if let currentItem = caffeineLevelOvertime.first(where: { data in
+                                                    calendar.component(.hour, from: data.time) == hour && calendar.component(.minute, from: data.time) == minute && amount <= data.caffeineAmount
+                                                }) {
+                                                    self.selectedItem = currentItem
+                                                    self.plotWidth = proxy.plotAreaSize.width
+                                                }
+                                            }
+                                        }
+                                        .onEnded { _ in
+                                            self.selectedItem = nil
+                                        },
+                                    including: .all
+                                )
+                        }
+                    }
                 }
-            }.padding()
+            }
         }
+        .padding()
+        .frame(width: UIScreen.main.bounds.width - 20, height: 200)
+        .background(Color.brandSecondary.cornerRadius(25))
         .onAppear {
             Task {
                 if logManager.logs.isEmpty {
@@ -129,12 +129,6 @@ struct CaffeineLevelInfo_Previews: PreviewProvider {
 }
 
 extension CaffeineLevelInfo {
-    private var base: some View {
-        RoundedRectangle(cornerRadius: 25)
-            .frame(width: 410, height: 200)
-            .foregroundColor(.brandSecondary)
-    }
-    
     private var sleepIndicator: some View {
         Text("Sleep")
             .font(.caption.bold())

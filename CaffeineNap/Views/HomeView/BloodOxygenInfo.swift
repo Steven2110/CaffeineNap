@@ -9,31 +9,54 @@ import SwiftUI
 
 struct BloodOxygenInfo: View {
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25).foregroundColor(.brandSecondary.opacity(0.5))
+        GeometryReader { geo in
             HStack(alignment: .top) {
                 lungsIcon
-                VStack(alignment: .leading, spacing: 7) {
-                    Text("Blood Oxygen").font(.system(size: 12, weight: .semibold))
+                    .frame(width: geo.size.width * 0.15)
+                VStack(alignment: .leading) {
+                    Text("Blood Oxygen")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    Spacer()
                     HStack(alignment: .firstTextBaseline, spacing: 5) {
-                        Text("98").font(.system(size: 24, weight: .heavy))
-                        Text("%").font(.system(size: 12, weight: .bold))
+                        Text("100")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .minimumScaleFactor(0.7)
+                        Text("%").font(.title3.bold())
                     }
-                    Text("Peak Resting HR").font(.system(size: 12, weight: .semibold))
+                    Spacer()
+                    Text("Peak Resting BO")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    Spacer()
                     HStack(alignment: .firstTextBaseline,spacing: 5) {
-                        Text("99").font(.system(size: 24, weight: .heavy))
-                        Text("%").font(.system(size: 12, weight: .bold))
+                        Text("99")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .minimumScaleFactor(0.7)
+                        Text("%").font(.title3.bold())
                     }
                 }
-                
-            }
-        }.frame(width: 160, height: 160)
+            }.padding(20)
+        }
+        .frame(width: UIScreen.main.bounds.width / 2 - 15, height: UIScreen.main.bounds.width / 2 - 20)
+        .background(Color.brandSecondary.opacity(0.5).cornerRadius(25))        
     }
 }
 
 struct BloodOxygenInfo_Previews: PreviewProvider {
     static var previews: some View {
         BloodOxygenInfo()
+            .previewDevice("iPhone 14 Pro Max")
+            .previewDisplayName("iPhone 14 Pro Max")
+        BloodOxygenInfo()
+            .previewDevice("iPhone 13 Mini")
+            .previewDisplayName("iPhone 13 Mini")
     }
 }
 
@@ -42,7 +65,6 @@ extension BloodOxygenInfo {
         Image(systemName: "lungs.fill")
             .resizable()
             .scaledToFit()
-            .frame(width: 24)
             .foregroundColor(.lungBlue)
     }
 }

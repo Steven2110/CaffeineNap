@@ -9,32 +9,54 @@ import SwiftUI
 
 struct HeartRateInfo: View {
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25)
-                .foregroundColor(.brandSecondary)
+        GeometryReader { geo in
             HStack(alignment: .top) {
                 heartIcon
-                VStack(alignment: .leading, spacing: 7) {
-                    Text("Resting HR").font(.system(size: 12, weight: .semibold))
+                    .frame(width: geo.size.width * 0.15)
+                VStack(alignment: .leading) {
+                    Text("Resting HR")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    Spacer()
                     HStack(alignment: .firstTextBaseline,spacing: 5) {
-                        Text("90").font(.system(size: 24, weight: .heavy))
-                        Text("BPM").font(.system(size: 12, weight: .bold))
+                        Text("100")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .minimumScaleFactor(0.7)
+                        Text("BPM").font(.caption.bold())
                     }
-                    Text("Peak Resting HR").font(.system(size: 12, weight: .semibold))
+                    Spacer()
+                    Text("Peak Resting HR")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    Spacer()
                     HStack(alignment: .firstTextBaseline,spacing: 5) {
-                        Text("90").font(.system(size: 24, weight: .heavy))
-                        Text("BPM").font(.system(size: 12, weight: .bold))
+                        Text("90")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .minimumScaleFactor(0.7)
+                        Text("BPM").font(.caption.bold())
                     }
                 }
-                
-            }
-        }.frame(width: 160, height: 160)
+            }.padding(20)
+        }
+        .frame(width: UIScreen.main.bounds.width / 2 - 15, height: UIScreen.main.bounds.width / 2 - 20)
+        .background(Color.brandSecondary.opacity(0.5).cornerRadius(25))
     }
 }
 
 struct HeartRateInfo_Previews: PreviewProvider {
     static var previews: some View {
         HeartRateInfo()
+            .previewDevice("iPhone 14 Pro Max")
+            .previewDisplayName("iPhone 14 Pro Max")
+        HeartRateInfo()
+            .previewDevice("iPhone 13 Mini")
+            .previewDisplayName("iPhone 13 Mini")
     }
 }
 
@@ -43,7 +65,6 @@ extension HeartRateInfo {
         Image(systemName: "heart.fill")
             .resizable()
             .scaledToFit()
-            .frame(width: 24)
             .foregroundColor(.red)
     }
 }

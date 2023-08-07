@@ -13,15 +13,17 @@ struct CNHomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
-                MainInfo()
-                CaffeineLevelInfo()
-                HStack(spacing: 10) {
+            ScrollView {
+                VStack(spacing: 10) {
+                    MainInfo()
+                    CaffeineLevelInfo()
                     VStack(spacing: 10) {
-                        HeartRateInfo()
-                        BloodOxygenInfo()
+                        HStack(spacing: 10) {
+                            HeartRateInfo()
+                            BloodOxygenInfo()
+                        }
+                        DrinksOfTheDayInfo()
                     }
-                    DrinksOfTheDayInfo()
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -37,10 +39,13 @@ struct CNHomeView: View {
                             .gesture(TapGesture(count: 2).onEnded {
                                 logManager.date = Date()
                             })
-                            .simultaneousGesture(TapGesture().onEnded {
-                                // - TODO: Show calendar when tapped once
-                                print("Tapped")
-                            })
+                            .simultaneousGesture(
+                                TapGesture()
+                                    .onEnded {
+                                        // - TODO: Show calendar when tapped once
+                                        print("Tapped")
+                                    }
+                            )
                         Button {
                             logManager.nextDay()
                         } label: {

@@ -16,56 +16,62 @@ struct MainInfo: View {
     @State var timer = Timer.publish(every: 30 * 60, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        ZStack {
-            base
-            HStack {
-                ZStack {
-                    baseCircularProgress
-                    CircularProgress(caffeineAmount: vm.currentCaffeineAmount, maxCaffeine: vm.maxCaffeineAmount)
-                    VStack {
-                        Image("coffee-beans")
-                        HStack(spacing: 0) {
-                            Color.clear
-                                .frame(minWidth: 30, maxWidth: 50, maxHeight: 10)
-                                .animatingOverlay(alignment: .trailing,for: vm.currentCaffeineAmount, color: .brandPrimary)
-                            Text(" / \(vm.maxCaffeineAmount, specifier: "%.0f") mg").foregroundColor(.brandPrimary)
-                        }.offset(x: -3)
-                    }
+        HStack {
+            ZStack {
+                baseCircularProgress
+                CircularProgress(caffeineAmount: vm.currentCaffeineAmount, maxCaffeine: vm.maxCaffeineAmount)
+                VStack {
+                    Image("coffee-beans")
+                    HStack(spacing: 0) {
+                        Color.clear
+                            .frame(minWidth: 30, maxWidth: 50, maxHeight: 10)
+                            .animatingOverlay(alignment: .trailing,for: vm.currentCaffeineAmount, color: .brandPrimary)
+                        Text(" / \(vm.maxCaffeineAmount, specifier: "%.0f") mg").foregroundColor(.brandPrimary)
+                    }.offset(x: -15)
                 }
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Good Morning, Steven! 🌅").font(.system(size: 18, weight: .bold))
-                    VStack(alignment: .leading, spacing: 10){
-                        HStack(spacing: 9) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Today Total").font(.system(size: 14, weight: .semibold))
-                                Color.clear
-                                    .frame(width: 70, height: 15)
-                                    .animatingOverlay(alignment: .leading, for: vm.totalTodayCaffeine, smallFont: true, measurementUnit: " mg")
-                            }
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Drinks").font(.system(size: 14, weight: .semibold))
-                                Color.clear
-                                    .frame(width: 70, height: 15)
-                                    .animatingOverlay(alignment: .leading, for: vm.beverageCupAmount, specifier: vm.cupAmountSpecifier,smallFont: true, measurementUnit: vm.beverageAmountMeasurementUnit)
-                            }
+            }
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Good Morning, Steven! 🌅")
+                    .font(.title3.bold())
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+                VStack(alignment: .leading, spacing: 10){
+                    HStack(spacing: 9) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Today Total").font(.system(size: 14, weight: .semibold))
+                            Color.clear
+                                .frame(width: 70, height: 15)
+                                .animatingOverlay(alignment: .leading, for: vm.totalTodayCaffeine, smallFont: true, measurementUnit: " mg")
                         }
-                        HStack(spacing: 24) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Alertness").font(.system(size: 14, weight: .semibold))
-                                Text(String(describing: vm.alertness)).font(.system(size: 14))
-                            }
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Predicted Sleep Time").font(.system(size: 14, weight: .semibold))
-                                ZStack {
-                                    Text("22:45").font(.system(size: 14))
-                                    infoLabel
-                                }
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Drinks").font(.system(size: 14, weight: .semibold))
+                            Color.clear
+                                .frame(width: 70, height: 15)
+                                .animatingOverlay(alignment: .leading, for: vm.beverageCupAmount, specifier: vm.cupAmountSpecifier,smallFont: true, measurementUnit: vm.beverageAmountMeasurementUnit)
+                        }
+                    }
+                    HStack(spacing: 24) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Alertness").font(.system(size: 14, weight: .semibold))
+                            Text(String(describing: vm.alertness)).font(.system(size: 14))
+                        }
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Predicted Sleep Time")
+                                .font(.system(size: 14, weight: .semibold))
+                            ZStack {
+                                Text("22:45").font(.system(size: 14))
+                                infoLabel
                             }
                         }
                     }
                 }
             }
+            .frame(minWidth: 175, maxWidth: 500)
         }
+        .padding(5)
+        .frame(width: UIScreen.main.bounds.width - 20, height: 170)
+        .background(Color.brandBrown)
+        .cornerRadius(25)
         .onAppear {
             Task {
                 if logManager.logs.isEmpty {
@@ -116,7 +122,7 @@ struct CircularProgress: View {
                 )
             )
             .rotationEffect(.degrees(180))
-            .frame(width: 120, height: 120)
+            .frame(minWidth: 50, idealWidth: 100, maxWidth: 120, minHeight: 50 , idealHeight: 100, maxHeight: 120)
             .padding(15)
     }
 }
@@ -125,16 +131,32 @@ struct MainInfo_Previews: PreviewProvider {
     static var previews: some View {
         MainInfo()
             .environmentObject(CNLogManager())
+            .previewDevice("iPhone 14 Pro Max")
+            .previewDisplayName("iPhone 14 Pro Max")
+        
+        MainInfo()
+            .previewDevice("iPhone 14 Pro")
+            .previewDisplayName("iPhone 14 Pro")
+            .environmentObject(CNLogManager())
+        
+        MainInfo()
+            .previewDevice("iPhone 14 Plus")
+            .previewDisplayName("iPhone 14 Plus")
+            .environmentObject(CNLogManager())
+        
+        MainInfo()
+            .previewDevice("iPhone 14")
+            .previewDisplayName("iPhone 14")
+            .environmentObject(CNLogManager())
+
+        MainInfo()
+            .previewDevice("iPhone 13 mini")
+            .previewDisplayName("iPhone 13 Mini")
+            .environmentObject(CNLogManager())
     }
 }
 
 extension MainInfo {
-    private var base: some View {
-        RoundedRectangle(cornerRadius: 25)
-            .frame(width: 410, height: 165)
-            .foregroundColor(.brandBrown)
-    }
-    
     private var baseCircularProgress: some View {
         Circle()
             .trim(from: 0.5, to: 1)
@@ -145,7 +167,7 @@ extension MainInfo {
                     lineCap: .round
                 )
             )
-            .frame(width: 120, height: 120)
+            .frame(minWidth: 50, idealWidth: 100, maxWidth: 120, minHeight: 50 , idealHeight: 100, maxHeight: 120)
             .padding(15)
     }
     
