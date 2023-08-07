@@ -201,6 +201,7 @@
 				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
 				B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */,
 				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
+				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
 				B04572602A389E05004E2C99 /* Utilities.swift */,
 			);
 			path = Utilities;
@@ -241,7 +242,6 @@
 			children = (
 				B0C64DD629B5ED1000C3BC07 /* CaffeineNap.entitlements */,
 				B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */,
-				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
 				B07047E92A2C6E5F0035CFE3 /* Utilities */,
 				B0C64DDD29B5F7D900C3BC07 /* Models */,
 				B0C64DDC29B5F7D400C3BC07 /* ViewModels */,
