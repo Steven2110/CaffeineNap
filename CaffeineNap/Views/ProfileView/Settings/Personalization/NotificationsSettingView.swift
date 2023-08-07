@@ -79,6 +79,8 @@ struct NotificationsSettingView: View {
                 }
             }
         }
+        .navigationTitle("Notifications")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

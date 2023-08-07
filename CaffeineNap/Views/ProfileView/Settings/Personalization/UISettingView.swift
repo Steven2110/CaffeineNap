@@ -29,6 +29,8 @@ struct UISettingView: View {
                 measurementUnitSetting
             }
         }
+        .navigationTitle("Interface")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

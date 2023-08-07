@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MetabolicParameterView: View {
     
+    @Environment (\.dismiss) private var dismiss
+    
     @State private var caffeineLimit: Double = 400.0
     @State private var bedtimeCaffeineTreshold: Double = 100.0
     @State private var caffeineHalfLife: Double = 4.0
@@ -156,11 +158,22 @@ struct MetabolicParameterView: View {
             }
         }
         .navigationTitle("Metabolic Parameters")
+        .navigationBarBackButtonHidden(true)
         .toolbar {
-            Button {
-                dismissKeyboard()
-            } label: {
-                Image(systemName: "keyboard.chevron.compact.down")
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left").fontWeight(.semibold)
+                    Text("Profile & Settings")
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    dismissKeyboard()
+                } label: {
+                    Image(systemName: "keyboard.chevron.compact.down")
+                }
             }
         }
     }
