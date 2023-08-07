@@ -104,7 +104,6 @@ struct CaffeineLevelInfo: View {
         .background(Color.brandSecondary.cornerRadius(25))
         .onAppear {
             Task {
-                emptyCharts()
                 if logManager.logs.isEmpty {
                     do {
                         logManager.logs = try await CloudKitManager.shared.fetchLog(for: logManager.getCurrentDateStart())
@@ -113,7 +112,8 @@ struct CaffeineLevelInfo: View {
                     }
                 }
             }
-            
+            emptyCharts()
+            generateCharts()
         }
         .onChange(of: logManager.logs) { _ in
             emptyCharts()
