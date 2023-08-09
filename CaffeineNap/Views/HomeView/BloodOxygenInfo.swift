@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct BloodOxygenInfo: View {
+    
+    @StateObject private var vm: BloodOxygenInfoViewModel = BloodOxygenInfoViewModel()
+    
     var body: some View {
         GeometryReader { geo in
             HStack(alignment: .top) {
@@ -20,32 +24,70 @@ struct BloodOxygenInfo: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                     Spacer()
-                    HStack(alignment: .firstTextBaseline, spacing: 5) {
-                        Text("100")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .minimumScaleFactor(0.7)
-                        Text("%").font(.title3.bold())
-                    }
+                    Color.clear
+                        .animatingOverlay(alignment: .leading, for: vm.bloodOxygen, font: .title, fontWeight: .heavy, measurementUnit: "%", mUnitFont: .title3.bold())
                     Spacer()
-                    Text("Peak Resting BO")
+                    Text("Peak Blood Oxygen")
                         .font(.subheadline)
                         .fontWeight(.bold)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                     Spacer()
-                    HStack(alignment: .firstTextBaseline,spacing: 5) {
-                        Text("99")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .minimumScaleFactor(0.7)
-                        Text("%").font(.title3.bold())
-                    }
+                    Color.clear
+                        .animatingOverlay(alignment: .leading, for: vm.peakBO, font: .title, fontWeight: .heavy, measurementUnit: "%", mUnitFont: .title3.bold())
                 }
             }.padding(20)
         }
         .frame(width: UIScreen.main.bounds.width / 2 - 15, height: UIScreen.main.bounds.width / 2 - 20)
-        .background(Color.brandSecondary.opacity(0.5).cornerRadius(25))        
+        .background(Color.brandSecondary.opacity(0.5).cornerRadius(25))
+        .onAppear {
+            vm.start()
+        }
+        .onChange(of: vm.isAuthorized) { _ in
+            vm.start()
+        }
+    }
+}
+
+class BloodOxygenInfoViewModel: ObservableObject {
+    @Published var bloodOxygen: Int = 0
+    @Published var peakBO: Int = 0
+    @Published var isAuthorized: Bool = false
+    
+    init() {
+        changeAuthorizationStatus()
+    }
+    
+    func changeAuthorizationStatus() {
+        guard let bloodOxygenType = HKObjectType.quantityType(forIdentifier: .oxygenSaturation) else { return }
+        let status = HKHealthStore().authorizationStatus(for: bloodOxygenType)
+        
+        DispatchQueue.main.async { [self] in
+            switch status {
+                case .notDetermined:
+                    isAuthorized = false
+                case .sharingDenied:
+                    isAuthorized = false
+                case .sharingAuthorized:
+                    isAuthorized = true
+                @unknown default:
+                    isAuthorized = false
+            }
+        }
+    }
+    
+    func start() {
+        HealthKitManager.shared.autorizeHealthKit {
+            self.changeAuthorizationStatus()
+            HealthKitManager.shared.readBloodOxygen(forToday: Date()) { value in
+                DispatchQueue.main.async {
+                    self.bloodOxygen = value
+                    if value > self.peakBO {
+                        self.peakBO = value
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -25,7 +25,7 @@ struct MainInfo: View {
                     HStack(spacing: 0) {
                         Color.clear
                             .frame(minWidth: 30, maxWidth: 50, maxHeight: 10)
-                            .animatingOverlay(alignment: .trailing,for: vm.currentCaffeineAmount, color: .brandPrimary)
+                            .animatingDoubleOverlay(alignment: .trailing,for: vm.currentCaffeineAmount, color: .brandPrimary)
                         Text(" / \(vm.maxCaffeineAmount, specifier: "%.0f") mg").foregroundColor(.brandPrimary)
                     }.offset(x: -15)
                 }
@@ -41,13 +41,13 @@ struct MainInfo: View {
                             Text("Today Total").font(.system(size: 14, weight: .semibold))
                             Color.clear
                                 .frame(width: 70, height: 15)
-                                .animatingOverlay(alignment: .leading, for: vm.totalTodayCaffeine, smallFont: true, measurementUnit: " mg")
+                                .animatingDoubleOverlay(alignment: .leading, for: vm.totalTodayCaffeine, smallFont: true, measurementUnit: " mg")
                         }
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Drinks").font(.system(size: 14, weight: .semibold))
                             Color.clear
                                 .frame(width: 70, height: 15)
-                                .animatingOverlay(alignment: .leading, for: vm.beverageCupAmount, specifier: vm.cupAmountSpecifier,smallFont: true, measurementUnit: vm.beverageAmountMeasurementUnit)
+                                .animatingDoubleOverlay(alignment: .leading, for: vm.beverageCupAmount, specifier: vm.cupAmountSpecifier,smallFont: true, measurementUnit: vm.beverageAmountMeasurementUnit)
                         }
                     }
                     HStack(alignment: .firstTextBaseline, spacing: 24) {

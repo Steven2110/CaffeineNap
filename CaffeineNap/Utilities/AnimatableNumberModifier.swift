@@ -2,7 +2,7 @@
 //  AnimatableNumberModifier.swift
 //  CaffeineNap
 //
-//  Created by Steven Wijaya on 01.08.2023.
+//  Created by Steven Wijaya on 09.08.2023.
 //
 
 import SwiftUI
@@ -10,13 +10,14 @@ import SwiftUI
 struct AnimatableNumberModifier: AnimatableModifier {
     
     var alignment: Alignment
-    var number: Double
-    var specifier: String
+    var number: Int
     var color: Color?
-    var smallFont: Bool
+    var font: Font
+    var fontWeight: Font.Weight
     var measurementUnit: String
+    var mUnitFont: Font
     
-    var animatableData: Double {
+    var animatableData: Int {
         get { number }
         set { number = newValue }
     }
@@ -24,9 +25,14 @@ struct AnimatableNumberModifier: AnimatableModifier {
     func body(content: Content) -> some View {
         content
             .overlay(alignment: alignment, content: {
-                Text("\(number, specifier: specifier)\(measurementUnit)")
-                    .font(smallFont ? .system(size: 14) : .body )
-                    .foregroundColor(color != nil ? color : .black)
+                HStack(alignment: .firstTextBaseline, spacing: 5){
+                    Text("\(number)")
+                        .font(font)
+                        .fontWeight(fontWeight)
+                        .foregroundColor(color != nil ? color : .black)
+                        .minimumScaleFactor(0.7)
+                    Text(measurementUnit).font(mUnitFont)
+                }
             })
     }
 }

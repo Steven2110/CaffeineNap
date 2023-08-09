@@ -24,7 +24,11 @@ extension View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    func animatingOverlay(alignment: Alignment = .center, for number: Double, specifier: String = "%.0f", color: Color? = nil, smallFont: Bool = false, measurementUnit: String = "") -> some View {
-        self.modifier(AnimatableNumberModifier(alignment: alignment, number: number, specifier: specifier, color: color, smallFont: smallFont, measurementUnit: measurementUnit))
+    func animatingDoubleOverlay(alignment: Alignment = .center, for number: Double, specifier: String = "%.0f", color: Color? = nil, smallFont: Bool = false, measurementUnit: String = "") -> some View {
+        self.modifier(AnimatableDecimalNumberModifier(alignment: alignment, number: number, specifier: specifier, color: color, smallFont: smallFont, measurementUnit: measurementUnit))
+    }
+    
+    func animatingOverlay(alignment: Alignment = .center, for number: Int, color: Color? = nil, font: Font = .body, fontWeight: Font.Weight, measurementUnit: String, mUnitFont: Font) -> some View {
+        self.modifier(AnimatableNumberModifier(alignment: alignment, number: number, color: color, font: font, fontWeight: fontWeight, measurementUnit: measurementUnit, mUnitFont: mUnitFont))
     }
 }

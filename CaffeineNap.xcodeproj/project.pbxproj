@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B017A30D2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A30C2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift */; };
 		B017A30F2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */; };
+		B017A32D2A817AC900E61B6A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A32C2A817AC900E61B6A /* HealthKitManager.swift */; };
+		B017A32F2A83595400E61B6A /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A32E2A83595400E61B6A /* AnimatableNumberModifier.swift */; };
 		B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */; };
 		B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725C2A3879C7004E2C99 /* CKRecordExt.swift */; };
 		B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */; };
@@ -36,7 +38,7 @@
 		B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */; };
 		B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */; };
 		B0AA9A352A78F87E0044313F /* MainInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A342A78F87E0044313F /* MainInfoViewModel.swift */; };
-		B0AA9A372A78FC0C0044313F /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */; };
+		B0AA9A372A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A362A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift */; };
 		B0AA9A392A7910ED0044313F /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A382A7910ED0044313F /* DateExt.swift */; };
 		B0AA9A3B2A7B648A0044313F /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A3A2A7B648A0044313F /* ChartData.swift */; };
 		B0C64DC929B5ED0700C3BC07 /* CaffeineNapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C64DC829B5ED0700C3BC07 /* CaffeineNapApp.swift */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		B017A30C2A80F16F00E61B6A /* EmptyDrinksOfTheDayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDrinksOfTheDayInfo.swift; sourceTree = "<group>"; };
 		B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfoRow.swift; sourceTree = "<group>"; };
+		B017A32C2A817AC900E61B6A /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		B017A32E2A83595400E61B6A /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageListViewModel.swift; sourceTree = "<group>"; };
 		B045725C2A3879C7004E2C99 /* CKRecordExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExt.swift; sourceTree = "<group>"; };
 		B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageDetailView.swift; sourceTree = "<group>"; };
@@ -101,7 +105,7 @@
 		B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewModel.swift; sourceTree = "<group>"; };
 		B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOfTheDayInfoBox.swift; sourceTree = "<group>"; };
 		B0AA9A342A78F87E0044313F /* MainInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoViewModel.swift; sourceTree = "<group>"; };
-		B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
+		B0AA9A362A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDecimalNumberModifier.swift; sourceTree = "<group>"; };
 		B0AA9A382A7910ED0044313F /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		B0AA9A3A2A7B648A0044313F /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		B0C64DC529B5ED0700C3BC07 /* CaffeineNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +203,8 @@
 				B0C64DE029B5FECF00C3BC07 /* Extensions */,
 				B0E7B9222A6147D200ADB0C7 /* Managers */,
 				B0EF618E2A0132AB009F272E /* AlertItem.swift */,
-				B0AA9A362A78FC0C0044313F /* AnimatableNumberModifier.swift */,
+				B0AA9A362A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift */,
+				B017A32E2A83595400E61B6A /* AnimatableNumberModifier.swift */,
 				B0C64DFB29B9C27300C3BC07 /* Constants.swift */,
 				B0C64DFF29B9C6B300C3BC07 /* CustomModifiers.swift */,
 				B04572602A389E05004E2C99 /* Utilities.swift */,
@@ -353,6 +358,7 @@
 				B050F3CB2A2CA9CB0045B2F8 /* CloudKitManager.swift */,
 				B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */,
 				B06D4BA32A69042200980FCA /* CNLogManager.swift */,
+				B017A32C2A817AC900E61B6A /* HealthKitManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -447,8 +453,9 @@
 				B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
-				B0AA9A372A78FC0C0044313F /* AnimatableNumberModifier.swift in Sources */,
+				B0AA9A372A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift in Sources */,
 				B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */,
+				B017A32F2A83595400E61B6A /* AnimatableNumberModifier.swift in Sources */,
 				B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
 				B04CABF129F3E90800238E68 /* CNProfile.swift in Sources */,
@@ -478,6 +485,7 @@
 				B04DB4EF29BB4BAF0076058B /* AddLogBeverageListView.swift in Sources */,
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,
 				B0AA9A2D2A6E96400044313F /* LogDetailView.swift in Sources */,
+				B017A32D2A817AC900E61B6A /* HealthKitManager.swift in Sources */,
 				B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */,
 				B04DB4F129BB4E980076058B /* AddLogBeverageDetailView.swift in Sources */,
 				B0C64DE929B6F1CB00C3BC07 /* CaffeineLevelInfo.swift in Sources */,
@@ -631,6 +639,9 @@
 				DEVELOPMENT_TEAM = YQD5MQWX93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your heart rate and blood oxygen records will be used to make prediction on your caffeine level.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your heart rate and blood oxygen records will be used to suggest better prediction algorithm on your caffeine level.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saving your heart rate and blood oxygen data to the CaffeineNap app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -661,6 +672,9 @@
 				DEVELOPMENT_TEAM = YQD5MQWX93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your heart rate and blood oxygen records will be used to make prediction on your caffeine level.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your heart rate and blood oxygen records will be used to suggest better prediction algorithm on your caffeine level.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saving your heart rate and blood oxygen data to the CaffeineNap app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
