@@ -11,6 +11,7 @@
 		B017A30F2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */; };
 		B017A32D2A817AC900E61B6A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A32C2A817AC900E61B6A /* HealthKitManager.swift */; };
 		B017A32F2A83595400E61B6A /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017A32E2A83595400E61B6A /* AnimatableNumberModifier.swift */; };
+		B02CB5AA2A8D42A700C7CFDC /* BeverageIconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02CB5A92A8D42A700C7CFDC /* BeverageIconPicker.swift */; };
 		B045725B2A35A685004E2C99 /* BeverageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */; };
 		B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725C2A3879C7004E2C99 /* CKRecordExt.swift */; };
 		B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */; };
@@ -78,6 +79,7 @@
 		B017A30E2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksOfTheDayInfoRow.swift; sourceTree = "<group>"; };
 		B017A32C2A817AC900E61B6A /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		B017A32E2A83595400E61B6A /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
+		B02CB5A92A8D42A700C7CFDC /* BeverageIconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageIconPicker.swift; sourceTree = "<group>"; };
 		B045725A2A35A685004E2C99 /* BeverageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageListViewModel.swift; sourceTree = "<group>"; };
 		B045725C2A3879C7004E2C99 /* CKRecordExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordExt.swift; sourceTree = "<group>"; };
 		B045725E2A388508004E2C99 /* CNBeverageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageDetailView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EF618B2A0119B1009F272E /* UIKitComponents */,
+				B02CB5A92A8D42A700C7CFDC /* BeverageIconPicker.swift */,
 				B0DDF64A2A56BA870097E5B6 /* CNCustomBeverageAddView.swift */,
 				B04CABEE29F02ED900238E68 /* CNThemeToggle.swift */,
 				B0FDE8842A5EE9650061F620 /* CustomTextField.swift */,
@@ -481,6 +484,7 @@
 				B06D4BA22A68FD0400980FCA /* AddLogBeverageListViewModel.swift in Sources */,
 				B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */,
 				B0AA9A352A78F87E0044313F /* MainInfoViewModel.swift in Sources */,
+				B02CB5AA2A8D42A700C7CFDC /* BeverageIconPicker.swift in Sources */,
 				B045725F2A388508004E2C99 /* CNBeverageDetailView.swift in Sources */,
 				B04DB4EF29BB4BAF0076058B /* AddLogBeverageListView.swift in Sources */,
 				B04DB50E29BB59540076058B /* XDismissButton.swift in Sources */,

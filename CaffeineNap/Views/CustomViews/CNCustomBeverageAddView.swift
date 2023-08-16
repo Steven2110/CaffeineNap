@@ -10,6 +10,8 @@ import CloudKit
 
 struct CNCustomBeverageAddView: View {
     
+    @State private var showingSheet: Bool = false
+    
     @Environment(\.dismiss) var dismiss
     
     @StateObject private var vm: CustomBeverageViewModel = CustomBeverageViewModel()
@@ -25,7 +27,19 @@ struct CNCustomBeverageAddView: View {
             Form {
                 Section("Beverage General Information") {
                     CustomTextField("Beverages name", text: $vm.name)
-                    CustomTextField("Icon", text: $vm.icon).autocapitalization(.none)
+                    HStack {
+                        Text("Icon")
+                        Spacer()
+                        Image(vm.icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
+                        Image(systemName: showingSheet ? "chevron.right" : "chevron.down").foregroundColor(.secondary)
+                    }.onTapGesture {
+                        withAnimation {
+                            showingSheet = true
+                        }
+                    }
                     Picker("Beverage base", selection: $vm.base) {
                         ForEach(CNBeverage.Base.allCases, id: \.self) { option in
                             Text(String(describing: option))
@@ -100,6 +114,9 @@ struct CNCustomBeverageAddView: View {
                     await vm.save(to: beverageManager)
                 }
             }
+        }
+        .sheet(isPresented: $showingSheet) {
+            BeverageIconPicker(selectedIcon: $vm.icon)
         }
     }
 }

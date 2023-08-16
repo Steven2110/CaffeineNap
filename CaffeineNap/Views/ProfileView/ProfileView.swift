@@ -72,7 +72,11 @@ struct ProfileView: View {
                         Text("iCloud")
                     }
                     SettingRow(imageName: "heart.fill", color: Color.pink, text: "Health Data") {
-                        Text("Health Data")
+                        Button {
+                            HealthKitManager.shared.autorizeHealthKit { }
+                        } label: {
+                            Text("Authorize")
+                        }
                     }
                 }
                 Section("Watch App") {

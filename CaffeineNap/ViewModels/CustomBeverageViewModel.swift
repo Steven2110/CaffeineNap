@@ -10,7 +10,7 @@ import CloudKit
 class CustomBeverageViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var types: [CNBeverage.DrinkType] = [.hot]
-    @Published var icon: String = ""
+    @Published var icon: String = "espresso-cup"
     @Published var base: CNBeverage.Base = .coffee
     @Published var caffeinePer100: String = ""
     

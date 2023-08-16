@@ -28,6 +28,13 @@ final class CNBeverageManager: ObservableObject {
         }
     }
     
+    func update(_ beverage: CNBeverage) {
+        DispatchQueue.main.async { [self] in
+            let index = beverages.firstIndex(where: {$0.id == beverage.id})!
+            beverages[index] = beverage
+        }
+    }
+    
     func getFilteredList(of category: Category = .all) -> [CNBeverage] {
         switch category {
         case .all:
