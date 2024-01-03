@@ -12,6 +12,8 @@ final class BeverageListViewModel: ObservableObject {
     @Published var selectedList: [CNBeverage] = []
     @Published var selectedCategory: Category = .all
     
+    @Published var showAlert: Bool = false
+    @Published var alert: AlertItem?
     @Published var isLoading: Bool = false
     
     func setSelectionList(from beverageManager: CNBeverageManager, animation: Bool = false) {
@@ -39,7 +41,8 @@ final class BeverageListViewModel: ObservableObject {
                 beverageManager.remove(beverage)
             }
         } catch {
-            print("Error can't delete: \(error.localizedDescription)")
+            showAlert = true
+            alert = AlertContext.failedDeleteBeverage
         }
     }
     

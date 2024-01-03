@@ -59,7 +59,7 @@ struct MainInfo: View {
                             Text("Predicted Sleep Time")
                                 .font(.system(size: 14, weight: .semibold))
                             ZStack {
-                                Text("22:45").font(.system(size: 14))
+                                Text(vm.predictedSleepTime, style: .time).font(.system(size: 14))
                                 infoLabel
                             }
                         }
@@ -175,6 +175,6 @@ extension MainInfo {
         Image(systemName: "info.circle")
             .resizable()
             .frame(width: 10, height: 10)
-            .offset(x: 28, y: -5)
+            .offset(x: 40, y: -5)
     }
 }

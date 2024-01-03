@@ -14,6 +14,7 @@ struct MetabolicParameterView: View {
     @State private var caffeineLimit: Double = 400.0
     @State private var bedtimeCaffeineTreshold: Double = 100.0
     @State private var caffeineHalfLife: Double = 4.0
+    @State private var sleepTime: Date = Calendar.current.date(bySettingHour: 23, minute: 0, second: 0, of: Date())!
     
     private let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -23,6 +24,25 @@ struct MetabolicParameterView: View {
     
     var body: some View {
         List {
+            Section {
+                DatePicker(selection: $sleepTime, displayedComponents: .hourAndMinute) {
+                    HStack {
+                        Image(systemName: "moon.zzz.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 45)
+                            .foregroundColor(.indigo)
+                        VStack(alignment: .leading) {
+                            Text("Desired Bedtime")
+                                .font(.title3)
+                                .bold()
+                            Text("Desired sleep time / the time you usually go to bed.")
+                                .foregroundColor(.secondary)
+                                .font(.subheadline)
+                        }.padding(.leading)
+                    }
+                }
+            }
             Section {
                 HStack {
                     Image("coffee-beans")

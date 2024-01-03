@@ -83,7 +83,7 @@ struct LogDetailView: View {
                         dismiss()
                     }
                 } label: {
-                    Label("Today", systemImage: "chevron.left").labelStyle(.titleAndIcon)
+                    Label("Back", systemImage: "chevron.left").labelStyle(.titleAndIcon)
                 }
             }
         }

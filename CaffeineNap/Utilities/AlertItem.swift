@@ -89,4 +89,19 @@ struct AlertContext {
         message: Text("Unable to save beverage to CloudKit Database.\nPlease try again later."),
         dismissButton: .default(Text("Ok"))
     )
+    
+    // MARK: - Delete custom beverage error
+    static let failedDeleteBeverage = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to delete beverage from CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    
+    // MARK: - Delete log error
+    static let failedDeleteLog = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to delete log from CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
 }

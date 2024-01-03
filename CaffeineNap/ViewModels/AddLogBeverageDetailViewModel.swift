@@ -32,6 +32,9 @@ final class AddLogBeverageDetailViewModel: ObservableObject {
             } else if amount == 1.5 {
                 amount += 0.5
                 specifier = "%.0f"
+            } else if amount == 0.5 {
+                amount += 0.5
+                specifier = "%.0f"
             } else { amount += 1}
         }
     }
@@ -44,7 +47,10 @@ final class AddLogBeverageDetailViewModel: ObservableObject {
             } else if amount == 1.5 {
                 amount -= 0.5
                 specifier = "%.0f"
-            } else if amount == 1 { } else {
+            } else if amount == 1 {
+                amount -= 0.5
+                specifier = "%.1f"
+            } else if amount == 0.5 { /* do nothing */ } else {
                 amount -= 1
             }
         }
@@ -73,14 +79,6 @@ final class AddLogBeverageDetailViewModel: ObservableObject {
         logRecord[CNLog.kCaffeineAmount] = selectedVolume!.amount * Double(amount)
         logRecord[CNLog.kVolume] = selectedVolume!.volume * Double(amount)
         logRecord[CNLog.kDrinkTime] = timeDrink
-        let database: DatabaseType = beverage.isCustom ? .privateDB : .publicDB
-        do {
-            let beverageRecord = try await CloudKitManager.shared.fetchRecord(from: database, with: beverage.id)
-            print(beverageRecord)
-            logRecord[CNLog.kBeverage] = CKRecord.Reference(record: beverageRecord, action: .none)
-        } catch {
-            print("Error fetchign beverage record")
-        }
         
         do {
             let record = try await CloudKitManager.shared.save(record: logRecord)

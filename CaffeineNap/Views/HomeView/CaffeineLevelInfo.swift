@@ -165,12 +165,9 @@ extension CaffeineLevelInfo {
                     caffeineLevelOvertime[i].caffeineAmount += log.caffeineAmount
                 } else if (currentDrinkTime >= caffeineLevelOvertime[i].time && currentDrinkTime < caffeineLevelOvertime[i + 1].time) {
                     caffeineLevelOvertime[i].caffeineAmount += log.caffeineAmount
-                    print(log.caffeineAmount)
                 }
             }
         }
-        print("Added")
-        print(caffeineLevelOvertime)
         
         for i in caffeineLevelOvertime.indices {
             if i == caffeineLevelOvertime.count - 1 { break }

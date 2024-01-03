@@ -10,6 +10,7 @@ import CloudKit
 final class LogDetailViewModel: ObservableObject {
     @Published var log: CNLog
     
+    @Published var alertItem: AlertItem?
     var logRecord: CKRecord?
     
     init(log: CNLog) {
@@ -43,10 +44,8 @@ final class LogDetailViewModel: ObservableObject {
         let deletedRecord = try? await CloudKitManager.shared.deleteRecord(id: log.id)
         
         guard deletedRecord != nil else {
-            print("Can't delete record")
+            alertItem = AlertContext.failedDeleteLog
             return
         }
-        
-        print(deletedRecord!)
     }
 }

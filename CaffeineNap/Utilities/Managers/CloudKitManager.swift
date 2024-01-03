@@ -138,8 +138,7 @@ final class CloudKitManager {
         records = result.matchResults.compactMap { try? $0.1.get() }
         
         for record in records {
-            let beverage = CNBeverage(record: record)
-            beverages.append(beverage)
+            beverages.append(record.convertToCNBeverage())
         }
         
         return beverages
@@ -168,8 +167,7 @@ final class CloudKitManager {
         let records = result.0.compactMap { try? $0.1.get() }
         
         for record in records {
-            let volumeCaffeineAmount = VolumeCaffeineAmount(record: record)
-            volumeCaffeineAmounts.append(volumeCaffeineAmount)
+            volumeCaffeineAmounts.append(record.convertToVolumeCaffeineAmount())
         }
         
         return volumeCaffeineAmounts
@@ -194,8 +192,7 @@ final class CloudKitManager {
         let records = result.0.compactMap { try? $0.1.get() }
         
         for record in records {
-            let log = CNLog(record: record)
-            logs.append(log)
+            logs.append(record.convertToCNLog())
         }
         
         return logs

@@ -9,4 +9,12 @@ import CloudKit
 
 extension CKRecord {
     func convertToCNBeverage() -> CNBeverage { CNBeverage(record: self) }
+    
+    func convertToVolumeCaffeineAmount() -> VolumeCaffeineAmount {
+        VolumeCaffeineAmount(record: self)
+    }
+    
+    func convertToCNLog() -> CNLog {
+        CNLog(record: self)
+    }
 }

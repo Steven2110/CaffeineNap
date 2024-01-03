@@ -34,14 +34,14 @@ final class BeverageDetailViewModel: ObservableObject {
     @Published var largeVolume: String = ""
     @Published var largeCaffeine: String = ""
     
-    init(beverage: CNBeverage) {
-        self.beverage = beverage
-        self.name = beverage.name
-        self.types = beverage.type
-        self.icon = beverage.icon
-        self.base = beverage.base
-        self.caffeinePer100 = beverage.caffeinePer100 != nil ? String(beverage.caffeinePer100!) : ""
-    }
+init(beverage: CNBeverage) {
+    self.beverage = beverage
+    self.name = beverage.name
+    self.types = beverage.type
+    self.icon = beverage.icon
+    self.base = beverage.base
+    self.caffeinePer100 = beverage.caffeinePer100 != nil ? String(beverage.caffeinePer100!) : ""
+}
     
     @MainActor
     func fetchVolumeCaffeine() async {

@@ -110,20 +110,18 @@ final class CNProfileViewModel: ObservableObject {
             alertItem = AlertContext.invalidProfile
             return
         }
-        print("Till here")
         
         guard let profileRecord = currentProfileRecord else {
             alertItem = AlertContext.unableToGetProfile
             return
         }
-        print("Then here")
+
         // CloudKit will update only the fields that are being updated, although we send all the data.
         profileRecord[CNProfile.kFirstName] = firstName
         profileRecord[CNProfile.kLastName] = lastName
         profileRecord[CNProfile.kUsername] = username
         profileRecord[CNProfile.kAvatar] = avatar.convertToCKAsset()
         
-        print("then here")
         CloudKitManager.shared.save(record: profileRecord) { result in
             DispatchQueue.main.async { [self] in
                 switch result {

@@ -13,7 +13,8 @@ struct BeverageIconPicker: View {
     @Environment(\.dismiss) var dismiss
     
     let columns = [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.flexible()),
+        GridItem(.flexible()),
     ]
     
     private let labelIcons: [String] = [
