@@ -637,10 +637,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CaffeineNap/CaffeineNap.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineNap/Preview Content\"";
-				DEVELOPMENT_TEAM = YQD5MQWX93;
+				DEVELOPMENT_TEAM = HVTW6GWLXS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your heart rate and blood oxygen records will be used to make prediction on your caffeine level.";
@@ -656,8 +657,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.KwikBianDhoan.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwikSteven.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,10 +672,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CaffeineNap/CaffeineNap.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineNap/Preview Content\"";
-				DEVELOPMENT_TEAM = YQD5MQWX93;
+				DEVELOPMENT_TEAM = HVTW6GWLXS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your heart rate and blood oxygen records will be used to make prediction on your caffeine level.";
@@ -689,8 +692,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.KwikBianDhoan.CaffeineNap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BianDhoanKwikSteven.CaffeineNap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

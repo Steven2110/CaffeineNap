@@ -17,13 +17,11 @@ struct CNHomeView: View {
                 VStack(spacing: 10) {
                     MainInfo()
                     CaffeineLevelInfo()
-                    VStack(spacing: 10) {
-                        HStack(spacing: 10) {
-                            HeartRateInfo()
-                            BloodOxygenInfo()
-                        }
-                        DrinksOfTheDayInfo()
+                    HStack(spacing: 10) {
+                        HeartRateInfo()
+                        BloodOxygenInfo()
                     }
+                    DrinksOfTheDayInfo()
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -63,7 +61,9 @@ struct CNHomeView: View {
             }.accentColor(.black)
         }
         .onAppear {
+            print("DOING TASK")
             Task {
+                
                 if logManager.logs.isEmpty {
                     do {
                         logManager.logs = try await CloudKitManager.shared.fetchLog(for: logManager.getCurrentDateStart())
