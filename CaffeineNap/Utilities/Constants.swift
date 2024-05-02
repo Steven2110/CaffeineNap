@@ -12,21 +12,29 @@ enum RecordType {
     static let beverage = "CNBeverage"
     static let volumeCaffeineAmount = "VolumeCaffeineAmount"
     static let log = "CNLog"
+    static let recipe = "CNRecipe"
+    static let recipeRating = "CNRecipeRating"
+    static let recipeTool = "CNRecipeTool"
+    static let recipeInstruction = "CNRecipeInstruction"
 }
 
 enum ImageDimension {
     case avatar
+    case recipeImage
     
     var placeholder: UIImage {
         switch self {
         case .avatar:
             return ImagePlaceHolder.avatar
+        case .recipeImage:
+            return ImagePlaceHolder.recipeImage
         }
     }
 }
 
 enum ImagePlaceHolder {
     static let avatar = UIImage(named: "default-avatar")!
+    static let recipeImage = UIImage(named: "Icon1")!
 }
 
 enum NotificationsDay {
@@ -63,3 +71,19 @@ enum Language: String  {
 }
 
 let SPECIFIER: String = "%.2f"
+
+let brewMethods: [String] = [
+    "Pour Over",
+    "Espresso",
+    "Instant Coffee",
+    "Cold Brew",
+    "French Press",
+    "Drip",
+    "Aeropress"
+]
+
+let recipeToolUnits: [String] = [
+    "pcs",
+    "gr",
+    "ml"
+]

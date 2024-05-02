@@ -26,7 +26,7 @@ struct CNLog: Identifiable, Equatable {
     var caffeineAmount: Double
     var volume: Double
     var drinkTime: Date
-    var beverage: CKRecord.Reference?
+//    var beverage: CKRecord.Reference?
     
     init(beverageIcon: String, beverageName: String, beverageAmount: Double, beverageSize: VolumeType, caffeineAmount: Double, volume: Double, drinkTime: Date) {
         self.id = CKRecord.ID(recordName: beverageName)
@@ -37,7 +37,7 @@ struct CNLog: Identifiable, Equatable {
         self.caffeineAmount = caffeineAmount
         self.volume = volume
         self.drinkTime = drinkTime
-        self.beverage = nil
+//        self.beverage = nil
     }
     
     init(record: CKRecord) {
@@ -49,6 +49,6 @@ struct CNLog: Identifiable, Equatable {
         caffeineAmount = record[CNLog.kCaffeineAmount] as? Double ?? 0.0
         volume = record[CNLog.kVolume] as? Double ?? 0.0
         drinkTime = record[CNLog.kDrinkTime] as? Date ?? Date()
-        beverage = record[CNLog.kBeverage] as? CKRecord.Reference
+//        beverage = record[CNLog.kBeverage] as? CKRecord.Reference
     }
 }

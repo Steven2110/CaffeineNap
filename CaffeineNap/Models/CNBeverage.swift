@@ -148,14 +148,14 @@ struct VolumeCaffeineAmount: Identifiable {
     var type: VolumeType
     var volume: Double
     var amount: Double
-    var beverage: CKRecord.Reference
+//    var beverage: CKRecord.Reference
                         
     init(type: VolumeType, volume: Double, amount: Double) {
         self.id = CKRecord.ID(recordName: String(describing: type))
         self.type = type
         self.volume = volume
         self.amount = amount
-        beverage = CKRecord.Reference(recordID: CKRecord.ID(recordName: String(describing: type)), action: .deleteSelf)
+//        beverage = CKRecord.Reference(recordID: CKRecord.ID(recordName: String(describing: type)), action: .deleteSelf)
     }
     
     init(record: CKRecord) {
@@ -163,6 +163,6 @@ struct VolumeCaffeineAmount: Identifiable {
         type = VolumeType.from(record[VolumeCaffeineAmount.kType] as? String ?? "N/A")
         volume = record[VolumeCaffeineAmount.kVolume] as? Double ?? 0.0
         amount = record[VolumeCaffeineAmount.kAmount] as? Double ?? 0.0
-        beverage = (record[VolumeCaffeineAmount.kBeverage] as? CKRecord.Reference)!
+//        beverage = (record[VolumeCaffeineAmount.kBeverage] as? CKRecord.Reference)!
     }
 }

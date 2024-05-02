@@ -110,6 +110,26 @@ final class CloudKitManager {
         }
     }
     
+    func fetchProfile() async throws -> CNProfile {
+        do {
+            let userRecordID = try await container.userRecordID()
+            let userRecord = try await container.publicCloudDatabase.record(for: userRecordID)
+            
+            guard let profileReference = userRecord["userProfile"] as? CKRecord.Reference else { return CNProfile(record: .init(recordType: RecordType.profile)) }
+            let profileRecordID = profileReference.recordID
+            
+            let database = getDatabaseContainer(.publicDB)
+            let result = try await database.record(for: profileRecordID)
+            
+            let userProfile = result.convertToCNProfile()
+            return userProfile
+        } catch {
+            print("Not found userRecordID")
+            print(error.localizedDescription)
+            return CNProfile(record: .init(recordType: RecordType.profile))
+        }
+    }
+    
     func fetchBeveragesList() async throws -> [CNBeverage] {
         
         var beverages: [CNBeverage] = []
@@ -196,5 +216,118 @@ final class CloudKitManager {
         }
         
         return logs
+    }
+    
+    func fetchRecipesList() async throws -> [CNRecipe] {
+        var recipes: [CNRecipe] = []
+
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.recipe, predicate: NSPredicate(value: true))
+        
+        // Fetching from public database
+        let database = getDatabaseContainer(.publicDB)
+        
+        let result = try await database.records(matching: query)
+        let records = result.matchResults.compactMap { try? $0.1.get() }
+        print(records)
+        
+        for record in records {
+            var recipe = record.convertToCNRecipe()
+            print(CNRecipe(record: record))
+            print(recipe)
+            
+            let author = try await fetchRecipeAuthor(recipe.authorReference)
+            let ratings = try await fetchRecipeRatings(for: recipe.id)
+            recipe.author = author
+            recipe.ratings = ratings
+            
+            recipes.append(recipe)
+        }
+        
+        return recipes
+    }
+    
+    func fetchRecipeAuthor(_ authorReference: CKRecord.Reference) async throws -> CNProfile {
+        print("Fetching author")
+        let recordID = authorReference.recordID
+        let record = try await fetchRecord(with: recordID)
+        
+        return record.convertToCNProfile()
+    }
+    
+    func fetchRecipeRatings(for recipe: CKRecord.ID) async throws -> [CNRecipeRating] {
+        print("Fetching ratings")
+        var ratings = [CNRecipeRating]()
+        
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.recipeRating, predicate: NSPredicate(format: "recipe == %@", recipe))
+        
+        // To get from which database container we should query our request
+        let database = getDatabaseContainer(.publicDB)
+        
+        let result = try await database.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        for record in records {
+            ratings.append(record.convertToCNRecipeRating())
+        }
+        
+        return ratings
+    }
+    
+    func fetchRecipeTools(for recipe: CKRecord.ID) async throws -> [CNRecipeTool] {
+        print("Fetching tools")
+        var tools = [CNRecipeTool]()
+        
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.recipeTool, predicate: NSPredicate(format: "recipe == %@", recipe))
+        
+        // To get from which database container we should query our request
+        let database = getDatabaseContainer(.publicDB)
+        
+        let result = try await database.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        for record in records {
+            tools.append(record.convertToCNRecipeTool())
+        }
+        
+        return tools
+    }
+    
+    func fetchRecipeInstructions(for recipe: CKRecord.ID) async throws -> [CNRecipeInstruction] {
+        print("Fetching instructions")
+        var instructions = [CNRecipeInstruction]()
+        
+        // Initialize query
+        let query = CKQuery(recordType: RecordType.recipeInstruction, predicate: NSPredicate(format: "recipe == %@", recipe))
+        
+        // To get from which database container we should query our request
+        let database = getDatabaseContainer(.publicDB)
+        
+        let result = try await database.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        for record in records {
+            instructions.append(record.convertToCNRecipeInstruction())
+        }
+        
+        return instructions
+    }
+    
+    func fetchCurrentUserRatingRecord(forRecipe: CKRecord.ID, byUser: CKRecord.ID) async throws -> CKRecord? {
+        print("Fetching user rating")
+        
+        // Initialize query
+        let predicate = NSPredicate(format: "recipe == %@ && by == %@", forRecipe as CVarArg, byUser as CVarArg)
+        let query = CKQuery(recordType: RecordType.recipeRating, predicate: predicate)
+        
+        // To get from which database container we should query our request
+        let database = getDatabaseContainer(.publicDB)
+        
+        let result = try await database.records(matching: query)
+        let records = result.0.compactMap { try? $0.1.get() }
+        
+        return records.first
     }
 }

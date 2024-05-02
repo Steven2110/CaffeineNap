@@ -35,6 +35,12 @@
 		B06D4BA42A69042200980FCA /* CNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D4BA32A69042200980FCA /* CNLogManager.swift */; };
 		B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */; };
 		B07047E82A2C69330035CFE3 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07047E72A2C69330035CFE3 /* UIImageExt.swift */; };
+		B09973332BD8163C00A761F8 /* CNRecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09973322BD8163C00A761F8 /* CNRecipeListView.swift */; };
+		B09973352BD8167400A761F8 /* CNRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09973342BD8167400A761F8 /* CNRecipe.swift */; };
+		B09973372BD817CE00A761F8 /* CNRecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09973362BD817CE00A761F8 /* CNRecipeRowView.swift */; };
+		B09973392BD8180000A761F8 /* CNRecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09973382BD8180000A761F8 /* CNRecipeDetailView.swift */; };
+		B099733B2BD8185A00A761F8 /* CNRecipeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099733A2BD8185A00A761F8 /* CNRecipeFormView.swift */; };
+		B099733D2BD818A600A761F8 /* NumberFormatterExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099733C2BD818A600A761F8 /* NumberFormatterExt.swift */; };
 		B0AA9A2D2A6E96400044313F /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A2C2A6E96400044313F /* LogDetailView.swift */; };
 		B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */; };
 		B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */; };
@@ -67,6 +73,10 @@
 		B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */; };
 		B0E7B9212A613FC600ADB0C7 /* BeverageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */; };
 		B0E7B9242A6147E700ADB0C7 /* CNBeverageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */; };
+		B0E9BD512BD93E8B0088F904 /* CNRecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9BD502BD93E8B0088F904 /* CNRecipeListViewModel.swift */; };
+		B0E9BD532BD96B0B0088F904 /* CNRecipeFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9BD522BD96B0B0088F904 /* CNRecipeFormViewModel.swift */; };
+		B0E9BD552BDA146E0088F904 /* DoubleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9BD542BDA146E0088F904 /* DoubleExt.swift */; };
+		B0E9BD572BDE90190088F904 /* CNRecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9BD562BDE90190088F904 /* CNRecipeDetailViewModel.swift */; };
 		B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF61892A0104E7009F272E /* AvatarView.swift */; };
 		B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618C2A0119CB009F272E /* PhotoPicker.swift */; };
 		B0EF618F2A0132AB009F272E /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF618E2A0132AB009F272E /* AlertItem.swift */; };
@@ -103,6 +113,12 @@
 		B06D4BA32A69042200980FCA /* CNLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLogManager.swift; sourceTree = "<group>"; };
 		B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNProfileViewModel.swift; sourceTree = "<group>"; };
 		B07047E72A2C69330035CFE3 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		B09973322BD8163C00A761F8 /* CNRecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeListView.swift; sourceTree = "<group>"; };
+		B09973342BD8167400A761F8 /* CNRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipe.swift; sourceTree = "<group>"; };
+		B09973362BD817CE00A761F8 /* CNRecipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeRowView.swift; sourceTree = "<group>"; };
+		B09973382BD8180000A761F8 /* CNRecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeDetailView.swift; sourceTree = "<group>"; };
+		B099733A2BD8185A00A761F8 /* CNRecipeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeFormView.swift; sourceTree = "<group>"; };
+		B099733C2BD818A600A761F8 /* NumberFormatterExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterExt.swift; sourceTree = "<group>"; };
 		B0AA9A2C2A6E96400044313F /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
 		B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewModel.swift; sourceTree = "<group>"; };
 		B0AA9A302A73B0640044313F /* DrinkOfTheDayInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOfTheDayInfoBox.swift; sourceTree = "<group>"; };
@@ -138,6 +154,10 @@
 		B0E7B91E2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCustomBeverageListView.swift; sourceTree = "<group>"; };
 		B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageDetailViewModel.swift; sourceTree = "<group>"; };
 		B0E7B9232A6147E700ADB0C7 /* CNBeverageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNBeverageManager.swift; sourceTree = "<group>"; };
+		B0E9BD502BD93E8B0088F904 /* CNRecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeListViewModel.swift; sourceTree = "<group>"; };
+		B0E9BD522BD96B0B0088F904 /* CNRecipeFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeFormViewModel.swift; sourceTree = "<group>"; };
+		B0E9BD542BDA146E0088F904 /* DoubleExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExt.swift; sourceTree = "<group>"; };
+		B0E9BD562BDE90190088F904 /* CNRecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNRecipeDetailViewModel.swift; sourceTree = "<group>"; };
 		B0EF61892A0104E7009F272E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B0EF618C2A0119CB009F272E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		B0EF618E2A0132AB009F272E /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -215,6 +235,17 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B09973312BD8161100A761F8 /* CNRecipeViews */ = {
+			isa = PBXGroup;
+			children = (
+				B09973322BD8163C00A761F8 /* CNRecipeListView.swift */,
+				B09973362BD817CE00A761F8 /* CNRecipeRowView.swift */,
+				B099733A2BD8185A00A761F8 /* CNRecipeFormView.swift */,
+				B09973382BD8180000A761F8 /* CNRecipeDetailView.swift */,
+			);
+			path = CNRecipeViews;
+			sourceTree = "<group>";
+		};
 		B0AA9A2B2A6E96230044313F /* DrinksOfTheDayInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +304,7 @@
 			children = (
 				B0C64DDE29B5F87900C3BC07 /* CNTabView.swift */,
 				B04DB51229BC8FFF0076058B /* AddLogViews */,
+				B09973312BD8161100A761F8 /* CNRecipeViews */,
 				B04DB50C29BB59470076058B /* CustomViews */,
 				B0C64DFD29B9C67E00C3BC07 /* ProfileView */,
 				B0C64DE529B6EF7000C3BC07 /* HomeView */,
@@ -290,6 +322,9 @@
 				B0E7B9202A613FC600ADB0C7 /* BeverageDetailViewModel.swift */,
 				B0FDE8822A5EE9090061F620 /* CustomBeverageViewModel.swift */,
 				B07047E52A2C64F80035CFE3 /* CNProfileViewModel.swift */,
+				B0E9BD502BD93E8B0088F904 /* CNRecipeListViewModel.swift */,
+				B0E9BD562BDE90190088F904 /* CNRecipeDetailViewModel.swift */,
+				B0E9BD522BD96B0B0088F904 /* CNRecipeFormViewModel.swift */,
 				B0AA9A2E2A6EABA30044313F /* LogDetailViewModel.swift */,
 				B0AA9A342A78F87E0044313F /* MainInfoViewModel.swift */,
 			);
@@ -303,6 +338,7 @@
 				B0C64DF529B88B3D00C3BC07 /* CNBeverage.swift */,
 				B06D4B9F2A685D5B00980FCA /* CNLog.swift */,
 				B04CABF029F3E90800238E68 /* CNProfile.swift */,
+				B09973342BD8167400A761F8 /* CNRecipe.swift */,
 				B04DB4EC29BB2D610076058B /* DayNotification.swift */,
 				B0C64DF729B8A7CC00C3BC07 /* Medicine.swift */,
 				B0C64DF329B8803000C3BC07 /* MockData.swift */,
@@ -318,6 +354,8 @@
 				B045725C2A3879C7004E2C99 /* CKRecordExt.swift */,
 				B0AA9A382A7910ED0044313F /* DateExt.swift */,
 				B0C64E0129B9C72E00C3BC07 /* ViewExt.swift */,
+				B0E9BD542BDA146E0088F904 /* DoubleExt.swift */,
+				B099733C2BD818A600A761F8 /* NumberFormatterExt.swift */,
 				B07047E72A2C69330035CFE3 /* UIImageExt.swift */,
 			);
 			path = Extensions;
@@ -455,9 +493,12 @@
 				B07047E62A2C64F80035CFE3 /* CNProfileViewModel.swift in Sources */,
 				B0AA9A2F2A6EABA30044313F /* LogDetailViewModel.swift in Sources */,
 				B0C64DF829B8A7CC00C3BC07 /* Medicine.swift in Sources */,
+				B09973332BD8163C00A761F8 /* CNRecipeListView.swift in Sources */,
+				B0E9BD552BDA146E0088F904 /* DoubleExt.swift in Sources */,
 				B0C64E0229B9C72E00C3BC07 /* ViewExt.swift in Sources */,
 				B0AA9A372A78FC0C0044313F /* AnimatableDecimalNumberModifier.swift in Sources */,
 				B050F3CC2A2CA9CB0045B2F8 /* CloudKitManager.swift in Sources */,
+				B0E9BD512BD93E8B0088F904 /* CNRecipeListViewModel.swift in Sources */,
 				B017A32F2A83595400E61B6A /* AnimatableNumberModifier.swift in Sources */,
 				B0AA9A312A73B0640044313F /* DrinkOfTheDayInfoBox.swift in Sources */,
 				B0C64DEF29B717C700C3BC07 /* DrinksOfTheDayInfo.swift in Sources */,
@@ -466,6 +507,9 @@
 				B0C64DF229B71D5C00C3BC07 /* CNBeveragesListView.swift in Sources */,
 				B04CABEF29F02ED900238E68 /* CNThemeToggle.swift in Sources */,
 				B04DB4E929BB219F0076058B /* AppIconView.swift in Sources */,
+				B09973392BD8180000A761F8 /* CNRecipeDetailView.swift in Sources */,
+				B09973352BD8167400A761F8 /* CNRecipe.swift in Sources */,
+				B0E9BD532BD96B0B0088F904 /* CNRecipeFormViewModel.swift in Sources */,
 				B0EF618D2A0119CB009F272E /* PhotoPicker.swift in Sources */,
 				B0C64DE429B603EE00C3BC07 /* CNHomeView.swift in Sources */,
 				B04DB4ED29BB2D610076058B /* DayNotification.swift in Sources */,
@@ -479,9 +523,11 @@
 				B0C64DF629B88B3D00C3BC07 /* CNBeverage.swift in Sources */,
 				B04DB4E729BAFFA80076058B /* MetabolicParameterView.swift in Sources */,
 				B06D4BA42A69042200980FCA /* CNLogManager.swift in Sources */,
+				B099733D2BD818A600A761F8 /* NumberFormatterExt.swift in Sources */,
 				B0AA9A3B2A7B648A0044313F /* ChartData.swift in Sources */,
 				B0FDE8832A5EE9090061F620 /* CustomBeverageViewModel.swift in Sources */,
 				B06D4BA22A68FD0400980FCA /* AddLogBeverageListViewModel.swift in Sources */,
+				B0E9BD572BDE90190088F904 /* CNRecipeDetailViewModel.swift in Sources */,
 				B045725D2A3879C7004E2C99 /* CKRecordExt.swift in Sources */,
 				B0AA9A352A78F87E0044313F /* MainInfoViewModel.swift in Sources */,
 				B02CB5AA2A8D42A700C7CFDC /* BeverageIconPicker.swift in Sources */,
@@ -500,6 +546,7 @@
 				B050F3CA2A2C9DA50045B2F8 /* CKAssetExt.swift in Sources */,
 				B0C64DED29B6FE4A00C3BC07 /* BloodOxygenInfo.swift in Sources */,
 				B0E7B91F2A6079DD00ADB0C7 /* EmptyCustomBeverageListView.swift in Sources */,
+				B09973372BD817CE00A761F8 /* CNRecipeRowView.swift in Sources */,
 				B017A30F2A81371800E61B6A /* DrinksOfTheDayInfoRow.swift in Sources */,
 				B0C64DF429B8803000C3BC07 /* MockData.swift in Sources */,
 				B0C64E0029B9C6B300C3BC07 /* CustomModifiers.swift in Sources */,
@@ -509,6 +556,7 @@
 				B04CABED29F02B1000238E68 /* UISettingView.swift in Sources */,
 				B0C64E0429BA0FC400C3BC07 /* SettingRow.swift in Sources */,
 				B04DB4EB29BB2BD20076058B /* NotificationsSettingView.swift in Sources */,
+				B099733B2BD8185A00A761F8 /* CNRecipeFormView.swift in Sources */,
 				B04572612A389E05004E2C99 /* Utilities.swift in Sources */,
 				B0EF618A2A0104E7009F272E /* AvatarView.swift in Sources */,
 			);

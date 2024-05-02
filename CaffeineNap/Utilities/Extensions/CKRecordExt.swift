@@ -17,4 +17,24 @@ extension CKRecord {
     func convertToCNLog() -> CNLog {
         CNLog(record: self)
     }
+    
+    func convertToCNProfile() -> CNProfile {
+        CNProfile(record: self)
+    }
+    
+    func convertToCNRecipe() -> CNRecipe {
+        CNRecipe(record: self)
+    }
+    
+    func convertToCNRecipeRating() -> CNRecipeRating {
+        CNRecipeRating(record: self)
+    }
+    
+    func convertToCNRecipeTool() -> CNRecipeTool {
+        CNRecipeTool(record: self)
+    }
+    
+    func convertToCNRecipeInstruction() -> CNRecipeInstruction {
+        CNRecipeInstruction(record: self)
+    }
 }

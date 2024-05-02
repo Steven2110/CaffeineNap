@@ -21,8 +21,10 @@ struct CNTabView: View {
             CNHomeView()
                 .tabItem { Label("Home", image: "home-icon") }
                 .tag(1)
-            Text("Caffeine Nap page!")
-                .tabItem{ Label("CaffeineNap", systemImage: "moon.zzz") }
+            NavigationView {
+                CNRecipeListView()
+            }
+                .tabItem{ Label("CNRecipe", systemImage: "mug.fill") }
                 .tag(2)
             Text("Add Drinks Page/Sheet!")
                 .tabItem{ Label("Add Drinks", systemImage: "plus.circle").environment(\.symbolVariants, .none) }

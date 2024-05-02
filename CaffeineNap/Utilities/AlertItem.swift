@@ -104,4 +104,41 @@ struct AlertContext {
         message: Text("Unable to delete log from CloudKit Database.\nPlease try again later."),
         dismissButton: .default(Text("Ok"))
     )
+    
+    // MARK: - Add Recipe
+    static let errorRecipeField = AlertItem(
+        title: Text("Missing or Wrong Input"),
+        message: Text("One of the recipe's information is not filled or there are some mistakes.\nPlease check and try again."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let successSavingRecipe = AlertItem(
+        title: Text("Successfully Saved Recipe"),
+        message: Text("Saving recipe done successfully."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedSavingRecipe = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to save recipe to CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedFetchRecipeDetail = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to fetch recipe data from CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedFetchCurrentUserRating = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to fetch your rating for this recipe from CloudKit Database.\nPlease try again later."),
+        dismissButton: .default(Text("Ok"))
+    )
+    
+    static let failedSavingRating = AlertItem(
+        title: Text("Network Error"),
+        message: Text("Unable to save your rating to CloudKit Database.\nPlease try again"),
+        dismissButton: .default(Text("Ok"))
+    )
 }
